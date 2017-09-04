@@ -1,9 +1,8 @@
 body {
-  background-image: url("http://www.pullmanhotels.com/imagerie/destinations/city/brisbane-1400x788-3.jpg");
   width: 100%;
 }
 
-div.container {
+#container {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -11,30 +10,27 @@ div.container {
   background-color: white;
 }
 
-div.other {
+#topbar {
   text-align: right;
   margin-right: 12%;
 }
 
 button.register {
   margin-left: 2%;
-  padding: 1%;
-  font-size: 120%;
-  font-weight: bold;
-  color: white;
-  background-color: green;
-  border: 1px solid green;
-  border-radius: 30%;
+  padding: 0.5%;
+  font-size: 100%;
+  border-color: white;
+  background-color: white;
+  border-style: none;
 }
 
 button.login {
-  margin-left: 2%;
-  padding: 1%;
-  font-size: 120%;
-  font-weight: bold;
-  background-color: pink;
-  border: 1px solid pink;
-  border-radius: 20%;
+  margin-left: 1%;
+  padding: 0.5%;
+  font-size: 100%;
+  border-color: white;
+  background-color: white;
+  border-style: none;
 }
 
 header, footer{
@@ -48,11 +44,9 @@ header, footer{
 
 header {
   font-size: 50px;
-}
-
-hr {
-    border-top: 5px groove #3366cc;
-    margin-bottom: 5%;
+  background-image: url("http://www.kanegledhill.com.au/gallery/images/9868/storey-bridge-sunrise-1800.jpg");
+  margin-bottom: 2%;
+  color: black;
 }
 
 div.socialmedia {
