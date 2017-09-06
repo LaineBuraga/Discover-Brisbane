@@ -50,8 +50,7 @@ hr {
 }
 
 h2 {
-  padding-left: 2%;
-  text-align: left;
+  text-align: center;
   font-size: 200%;
   color: darkblue;
   font-style: oblique;
@@ -73,7 +72,25 @@ h3 {
   position:relative;
 }
 
-.categories-left {
+.city_categories{
+  width:25%;
+  height:100px;
+  border-style: double;
+  padding: 0.3%;
+  margin: 1%;
+  position:relative;
+}
+
+.other_categories {
+  width: 15%;
+  height:80px;
+  border-style: double;
+  padding: 0.3%;
+  margin: 1%;
+  position:relative;
+}
+
+.categories-left, .city_categories, .other_categories {
   float: left;
 }
 
@@ -90,7 +107,8 @@ h3 {
   backface-visibility: hidden;
 }
 
-.categories-left:hover .image, .categories-right:hover .image {
+.categories-left:hover .image, .categories-right:hover .image,
+.city_categories:hover .image, .other_categories:hover .image {
   opacity: 0.5;
 }
 
@@ -106,7 +124,8 @@ h3 {
     width:100%;
 }
 
-.categories-left:hover .box-text, .categories-right:hover .box-text {
+.categories-left:hover .box-text, .categories-right:hover .box-text,
+.city_categories:hover .box-text, .other_categories:hover .box-text {
   visibility: visible;
   opacity: 1;
 }
