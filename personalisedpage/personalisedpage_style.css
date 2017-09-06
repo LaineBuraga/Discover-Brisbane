@@ -15,22 +15,20 @@ body {
   margin-right: 12%;
 }
 
-button.register {
-  margin-left: 2%;
-  padding: 0.5%;
-  font-size: 100%;
-  border-color: white;
-  background-color: white;
-  border-style: none;
-}
-
-button.login {
+button.logout {
   margin-left: 1%;
   padding: 0.5%;
   font-size: 100%;
-  border-color: white;
-  background-color: white;
-  border-style: none;
+  color: black;
+  border-color: grey;
+  background-color: grey;
+  border-radius: 15%;
+}
+
+button.logout:hover {
+  background-color: lightgrey;
+  color: black;
+  border-color: lightgrey;
 }
 
 header {
@@ -58,6 +56,12 @@ h2 {
   color: darkblue;
   font-style: oblique;
   font-weight: bolder;
+}
+
+h3 {
+  padding-left: 2%;
+  text-align: left;
+  font-style: italic;
 }
 
 .categories-left, .categories-right {
