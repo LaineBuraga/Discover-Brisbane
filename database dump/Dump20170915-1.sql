@@ -28,13 +28,14 @@ CREATE TABLE `locations` (
   `location_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(256) DEFAULT NULL,
   `address` varchar(256) DEFAULT NULL,
-  `phone_number` varchar(12) DEFAULT NULL,
+  `phone_number` varchar(15) DEFAULT NULL,
   `email` varchar(256) DEFAULT NULL,
   `category` varchar(45) DEFAULT NULL,
-  `photo_path` varchar(256) DEFAULT NULL,
-  `description` varchar(5000) DEFAULT NULL,
+  `photo_name` varchar(256) DEFAULT NULL,
+  `departments` varchar(256) DEFAULT NULL,
+  `industry_typy` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`location_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,6 +44,7 @@ CREATE TABLE `locations` (
 
 LOCK TABLES `locations` WRITE;
 /*!40000 ALTER TABLE `locations` DISABLE KEYS */;
+INSERT INTO `locations` VALUES (1,'Queensland University of Technology','2 George St, Brisbane City QLD 4000','07 3138 2000','askqut@qut.edu.au','College','qut.jpg','Business, Creative Industries, Education, Health, Law, Science and Engineering',NULL),(2,'University of Queensland','St Lucia QLD 4072','07 3365 1111','help@its.uq.edu.au','College','uq.jpq','Business, Economics & Law, Engineering, Architecture & Information Technology, Health and Behavioural Sciences, Humanities and Social Sciences, Medicine and Science',NULL),(3,'Griffith University','176 Messines Ridge Road Mt Gravatt Qld 4122','07 3735 7111','ithelp@griffith.edu.au','College','griffith.jpg','Arts, Education and Law, Business, Health and Science',NULL),(4,'Brisbane Square Library','Brisbane Square, 266 George St, Brisbane City QLD 4000','07 3403 4166','','Library','Brisabane Square.jpg',NULL,NULL),(5,'State Library of Queensland','Stanley Pl, South Brisbane QLD 4101','07 3840 7666',NULL,'Library','State_Library_Of_Queensland.jpg',NULL,NULL),(6,'Brisbane City Council','13 Waldheim St, Annerley QLD 4103','07 3403 8888','','industry','Brisbane_City_Council_logo.png',NULL,'Council'),(7,'Tourism Australia','Level 29, 420 George Street, Sydney, NSW, 2000, Australia','02 9360 1111','privacy@tourism.australia.com','industry','tourism_australia.jpg',NULL,'Tourism'),(8,'Treasury Hotel','130 William St, Brisbane City QLD 4000','07 3306 8888','brtcswitchboard@star.com.au ','hotel','treasuryhotel_hero.jpg',NULL,NULL),(9,'The Sebel Quay West Brisbane','132 Alice St, Brisbane City QLD 4000','07 3853 6000','H8783@accor.com','hotel','Sebel Quay.jpg',NULL,NULL),(10,'City Botanic Gardens','Alice St, Brisbane City QLD 4000','07 3403 8888',NULL,'park','Brisbane-City-botanic-gardens-Botanical-gardens.jpg',NULL,NULL),(11,'Brisbane Botanic Gardens Mt Coot-tha','152 Mount Coot Tha Rd, Mount Coot-Tha QLD 4066','‎07 34032535',NULL,'park','Brisbane Botanic Gardens Mt Coottha.jpg',NULL,NULL),(12,'Australia Zoo','1638 Steve Irwin Way, Beerwah QLD 4519','07 5436 2000',NULL,'zoo','australia zoo.JPG',NULL,NULL),(13,'Currumbin Wildlife Sanctuary','28 Tomewin St Currumbin QLD 4223','(07) 5534 1266','ENQUIRIES@CWS.ORG.AU','zoo','currumbin-wildlife-sanctuary-logo.jpg',NULL,NULL),(14,'Queensland Museum & Science Centre','Grey St & Melbourne St, South Brisbane QLD 4101','07 3840 7555',NULL,'museum','brisbane-museum.jpg',NULL,NULL),(15,'MacArthur Museum Brisbane','MacArthur Chambers, 201 Edward St, Brisbane City QLD 4000','07 3211 7052',NULL,'museum','macarthur-museum-brisbane.jpg',NULL,NULL),(16,'Riverbar & Kitchen','71 Eagle St, Brisbane City QLD 4000','07 3211 9020','mail@riverbarandkitchen.com.au','restaurant','riverbar.jpg',NULL,NULL),(17,'Funny Funny Korean Restaurant & Pub','85 George St, Brisbane City QLD 4000','07 3211 3431',NULL,'restaurant','FunnyFunny.jpg',NULL,NULL),(18,'Myer Centre, Brisbane','91 Queen St, Brisbane City QLD 4000','07 3223 6900','Brisbane.MyerCentre@vicinity.com.au','mall','themyercentre_queenstreetmall.jpg',NULL,NULL),(19,'Queen Street Mall','Queen Street mall, Queen St, Brisbane City QLD 4000','07 3006 6290',NULL,'mall','Queen_Street_Mall_Brisbane.jpg',NULL,NULL);
 /*!40000 ALTER TABLE `locations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,4 +87,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-15 16:05:07
+-- Dump completed on 2017-09-16 16:23:06
