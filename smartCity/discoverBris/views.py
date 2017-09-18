@@ -7,3 +7,6 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, 'homepage/homepage.html', {})
+
+def indiv(request):
+    return render(request,'indiv/indiv.html', {})

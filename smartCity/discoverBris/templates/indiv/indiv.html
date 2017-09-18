@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Discover Brisbane - QUT</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'indiv/indiv.css' %}" type="text/css"/>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Discover Brisbane</h1>
+			</header>
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Colleges</a></li>
+				<li>QUT</li>
+			</ul>
+			<img src="{% static "indiv/qut.jpg" %}" width="300" class="place">
+			<article>
+				<h1>Queensland University of Technology</h1>
+				<p>Address: 2 George St, Brisbane City QLD 4000</p>
+				<p>Phone No: (07) 3138 2000</p>
+				<p>Email: askqut@qut.edu.au</p>
+				<p>Departments: Business, Creative Industries, Education, Health, Law, Science and Engineering</p>
+			</article>
+			<footer>&copy; DiscoverBrisbane.com</footer>
+		</div>
+	</body>
+</html>
