@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_protect
 from django.template import loader
 from django.shortcuts import render
 
@@ -10,3 +11,7 @@ def index(request):
 
 def indiv(request):
     return render(request,'indiv/indiv.html', {})
+
+@csrf_protect
+def successView(request):
+    return render(request, 'admin/adminPage.html', {})
