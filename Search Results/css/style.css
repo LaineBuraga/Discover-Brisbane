@@ -1,0 +1,49 @@
+header, footer {
+    padding: 1em;
+    clear: left;
+    text-align: center;
+    color: white;
+    background-color: #3366cc;
+}
+ul.History {
+    width: 100%;
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+ul.History li {
+    display: inline;
+    font-size: 18px;
+}
+ul.History li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.History li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.History li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+img.libraries {
+    padding: 1em;
+    float: centre;
+}
+
+#resultList {
+    background-color: lightgrey;
+}
+
+div.option1, div.option2, div.option3, div.option4, div.option5 {
+    background-color: lightblue;
+}
+
+a, p {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
