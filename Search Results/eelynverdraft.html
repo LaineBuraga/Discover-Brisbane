@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+      <title>Search Results</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'result/result.css' %}" type="text/css"/>
+  </head>
+  <body>
+
+          <!-- covers entire list -->
+          <div id="resultList">
+            <div id="topbar">
+                <hr><header>
+                    <h1>Discover Brisbane</h1>
+                </header><hr>
+                <ul class="History">
+      			         <li><a href="#">Home</a></li>
+      			            <li>Libraries</li>
+                </ul>
+                <h2>Colleges</h2>
+            </div>
+              <div class="option1">
+                <img src="{% static "indiv/qut.jpg" %}" alt="QUT" width="300" class="colleges">
+                <a href="/indiv/indiv/">Queensland University of Technology</a> <br>
+                <p> <b>Address:</b> 2 George St, Brisbane City QLD 4000</p><hr>
+              </div>
+              <div class="option2">
+                <img src="{% static "indiv/qut.jpg" %}" alt="QUT" width="300" class="colleges">
+                <a href="/indiv/indiv/">Queensland University of Technology</a> <br>
+                <p> <b>Address:</b> 2 George St, Brisbane City QLD 4000</p><hr>
+              </div>
+              <div class="option3">
+                <img src="{% static "indiv/qut.jpg" %}" alt="QUT" width="300" class="colleges">
+                <a href="/indiv/indiv/">Queensland University of Technology</a> <br>
+                <p> <b>Address:</b> 2 George St, Brisbane City QLD 4000</p><p>
+              </div><hr>
+          <footer>&copy; Discover Brisbane 2017</footer>
+      </div>
+    </body>
+</html>

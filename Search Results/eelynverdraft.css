@@ -1,0 +1,63 @@
+body {
+  width: 100%;
+}
+
+hr {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#resultList {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header, footer {
+    padding: 1em;
+    clear: left;
+    text-align: center;
+}
+ul.History {
+    width: 100%;
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+ul.History li {
+    display: inline;
+    font-size: 18px;
+}
+ul.History li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.History li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.History li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+img.colleges {
+    padding: 1em;
+    float: centre;
+}
+
+/*
+#resultList {
+    background-color: lightgrey;
+}
+
+div.option1, div.option2, div.option3, div.option4, div.option5 {
+    background-color: lightgrey;
+}*/
+
+a, p {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
