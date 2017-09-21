@@ -1,6 +1,6 @@
 CREATE DATABASE  IF NOT EXISTS `ifb299` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `ifb299`;
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: ifb299
 -- ------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE `locations` (
   `category` varchar(45) DEFAULT NULL,
   `photo_name` varchar(256) DEFAULT NULL,
   `departments` varchar(256) DEFAULT NULL,
-  `industry_typy` varchar(45) DEFAULT NULL,
+  `industry_type` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`location_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -87,4 +87,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-16 16:23:06
+-- Dump completed on 2017-09-21 12:51:34
