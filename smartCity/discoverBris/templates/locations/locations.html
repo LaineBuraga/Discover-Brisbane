@@ -1,0 +1,10 @@
+{% if all_locations %}
+<h1>Locations:</h1>
+<ul>
+    {% for location in all_locations %}
+    <li><a href="/locations/{{ location.location_id }}/">{{ location.name }}</a></li>
+    {% endfor %}
+</ul> 
+{% else %}
+<h3>No locations in database</h3>
+{% endif %}

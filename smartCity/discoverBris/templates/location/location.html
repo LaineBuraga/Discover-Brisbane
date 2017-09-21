@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Discover Brisbane - QUT</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'location/location2.css' %}" type="text/css"/>
+	</head>
+	<body>
+		<div class="container">
+			<hr><header>
+				<h1>Discover Brisbane</h1>
+			</header><hr>
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">{{ location.category }}</a></li>
+				<li>{{ location.name }}</li>
+			</ul>
+			{% with 'location/'|add:location.photo_name as image_static %}
+			<img src="{% static image_static %}" width="300" class="place">	
+			{% endwith %}
+			<article>
+				<h1>{{ location.name }}</h1>
+				<p>Address: {{ location.address }}</p>
+				<p>Phone No: {{ location.phone_number }}</p>
+				<p>Email: 
+				{%if location.email == '' %}
+					None
+				{% else %}
+					{{ location.email }}
+				{% endif %}
+				</p>
+				{% if location.departments %}
+				<p>Departments: {{ location.departments }}</p>
+				{% endif %}
+				{% if location.industry_type %}
+				<p>Industry Type: {{ location.industry_type }}</p>
+				{% endif %}
+			</article>
+			<footer>&copy; Discover Brisbane 2017</footer>
+		</div>
+	</body>
+</html>
