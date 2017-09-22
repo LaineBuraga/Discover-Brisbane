@@ -23,6 +23,12 @@ def location(request, location_id):
         raise Http404("Location does not exist")
     return render(request, 'location/location.html', {'location': location})
 
+def result(request):
+    return render(request, 'result/locationList.html', {})
+
+def test(request):
+    return render(request, 'test/test.html', {})
+
 @csrf_protect
 def successView(request):
     return render(request, 'admin/adminPage.html', {})
