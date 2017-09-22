@@ -15,6 +15,31 @@ h2 {
     color: #343536;
 }
 
+ul.History {
+    width: 100%;
+    /* padding: 5px ; */
+    list-style: none;
+    /* background-color: #E6E8EA; */
+}
+ul.History li {
+    display: inline;
+    font-size: 18px;
+    color: lightgray;
+}
+ul.History li+li:before {
+    padding: 8px;
+    color: grey;
+    content: "/\00a0";
+}
+ul.History li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.History li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
