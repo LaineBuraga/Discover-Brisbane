@@ -96,7 +96,7 @@
 
       <div id="modify" class="tabcontent">
         <div class="title"><h3>MODIFY ITEM LOCATION</h3></div>
-          <select id="selectCategory">
+          <!--<select id="selectCategory">
             <option value="none">Category</option>
             <option value="Colleges">Colleges</option>
             <option value="Libraries">Libraries</option>
@@ -107,7 +107,17 @@
             <option value="Museums">Museums</option>
             <option value="Restaurants">Restaurants</option>
             <option value="Malls">Malls</option>
-          </select><br><br><br>
+          </select><br><br><br>-->
+          {% if all_locations %}
+            <ul>
+              {% for location in all_locations %}
+                <li><a href="/discoverBris/{{ location_id }}/">{{ location.name }}</a></li>
+                {% endfor %}
+            </ul>
+          {% else %}
+            <h3>Sorry, there are no locations recorded</h3>
+          {% endif %}
+          
           <div id="left">
             <div class="title">Current</div><br><br><br>
             Item name: <span>&emsp; ***from database***</span><br><br>
