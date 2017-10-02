@@ -1,6 +1,5 @@
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_protect
-from django.template import loader
 from django.shortcuts import render
 from .models import Locations, Client
 from django.http import Http404
@@ -23,12 +22,19 @@ def location(request, location_id):
         raise Http404("Location does not exist")
     return render(request, 'location/location.html', {'location': location})
 
-#client --- test!
-def detail(request):
+#admin --- test!
+def successView(request):
     all_locations = Locations.objects.all()
-    template = loader.get_template('discoverBris/adminPage.html')
-    context = {'all_locations': all_locations}
-    return HttpResponse('')
+    return render(request, 'admin/adminPage.html', {'all_locations': all_locations})
+#result list --- test!
+def collegeList(request):
+    all_locations = Locations.objects.all()
+    return render(request, 'collegeList/collegeList.html', {'all_locations': all_locations})
+
+def parkList(request):
+    all_locations = Locations.objects.all()
+    return render(request, 'parkList/parkList.html', {'all_locations': all_locations})
+
 
 #old - test #1
 #def detail(request, client_id)
@@ -40,15 +46,10 @@ def detail(request):
 #    return HttpResponse(html)
     #return HttpResponse(<h2>Details of customer ID" + str(client_id) + "</h2>")
 
-
-
 #static pages
-def result(request):
-    return render(request, 'result/locationList.html', {})
+#def result(request):
+#    return render(request, 'result/locationList.html', {})
 
-def test(request):
-    return render(request, 'test/test.html', {})
-
-@csrf_protect
-def successView(request):
-    return render(request, 'admin/adminPage.html', {})
+#@csrf_protect
+#def successView(request):
+#    return render(request, 'admin/adminPage.html', {})

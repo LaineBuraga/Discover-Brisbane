@@ -12,6 +12,6 @@ create table client(
     salt VARCHAR(255),
     password VARCHAR(255),
     phone_number VARCHAR(10),
-    client_type VARCHAR(45),
+    client_type ENUM ('tourist', 'student', 'businessman'),	
     primary key ( client_id )
 );*/

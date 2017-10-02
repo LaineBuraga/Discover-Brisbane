@@ -13,13 +13,30 @@
 			</header><hr>
 			<ul class="History">
 			 <li><a href="#">Home</a></li>
-				<li>Libraries</li>
+				<li>Parks</li>
 			</ul>
-			<h2>Colleges</h2>
-		</div>
+		</div><br><br>
+
+    {% for location in all_locations %}
+    {% if location.category == 'park' %}
 		<div class="section">
 			<div class="left">
-				<img src="{% static 'location/qut.jpg' %}" alt="QUT" width="300" class="colleges">
+        {% with 'location/'|add:location.photo_name as image_static %}
+				<img src="{% static image_static %}" width="200px" class="image">   <!-- can't adjust size on css?? -->
+        {% endwith %}
+			</div>
+			<div class="right">
+				<br><br><br><span><a href="/locations/{{ location.location_id }}/">{{ location.name }}</a></span><br><br>
+				<span>&nbsp &nbsp &nbsp<b>Address:</b> {{ location.address }}</span>
+			 </div>
+		</div><hr>
+    {% endif %}
+    {% endfor %}
+
+<!--static
+    <div class="section">
+			<div class="left">
+				<img src="{% static 'location/qut.jpg' %}" alt="QUT" width="300" class="image">
 			</div>
 			<div class="right">
 				<br><br><br><span><a href="">Queensland University of Technology</a></span><br><br>
@@ -28,22 +45,14 @@
 		</div><hr>
 		<div class="section">
 			<div class="left">
-				<img src="{% static 'location/qut.jpg' %}" alt="QUT" width="300" class="colleges">
+				<img src="{% static 'location/qut.jpg' %}"  alt="QUT" width="300" class="image">
 			</div>
 			<div class="right">
 				<br><br><br><span><a href="">Queensland University of Technology</a></span><br><br>
 				<span>&nbsp &nbsp &nbsp<b>Address:</b> 2 George St, Brisbane City QLD 4000</span>
 			 </div>
 		</div><hr>
-		<div class="section">
-			<div class="left">
-				<img src="{% static 'location/qut.jpg' %}"  alt="QUT" width="300" class="colleges">
-			</div>
-			<div class="right">
-				<br><br><br><span><a href="">Queensland University of Technology</a></span><br><br>
-				<span>&nbsp &nbsp &nbsp<b>Address:</b> 2 George St, Brisbane City QLD 4000</span>
-			 </div>
-		</div><hr>
+-->
 	  <footer>&copy; Discover Brisbane 2017</footer>
       </div>
     </body>

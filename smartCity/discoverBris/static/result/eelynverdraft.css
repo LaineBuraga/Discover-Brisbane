@@ -42,9 +42,10 @@ ul.History li a:hover {
     text-decoration: underline;
 }
 
-img.colleges {
+.image {
     padding: 1em;
     float: centre;
+    width: 50px;
 }
 
 a, p {
@@ -67,4 +68,3 @@ a, p {
 	width: 65%;
 	float: right;
 }
-
