@@ -1,0 +1,14 @@
+{% block content %}
+  {% load staticfiles %}
+  <div class="section">
+   <div class="left">
+     {% with 'location/'|add:location.photo_name as image_static %}
+       <img src="{% static image_static %}" width="200px" class="image">
+     {% endwith %}
+   </div>
+   <div class="right"><br><br><br>
+     <span><a href="/locations/{{ location.location_id }}/">{{ location.name }}</a></span><br><br>
+     <span>&nbsp &nbsp &nbsp<b>Address:</b> {{ location.address }}</span>
+   </div>
+ </div><hr align="left" width="88%">
+{% endblock %}
