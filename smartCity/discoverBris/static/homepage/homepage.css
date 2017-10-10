@@ -34,7 +34,7 @@ button.login {
 }
 
 header {
-  font-size: 250%;
+  font-size: 150%;
   text-align: center;
   font-variant: small-caps;
   font-weight: bold;
@@ -108,31 +108,6 @@ h2 {
 
 .content {
   overflow: auto;
-}
-
-div.socialmedia {
-  text-align: center;
-}
-
-.fa {
-	border-radius: 50px;
-	padding: 10px;
-	margin: 20px;
-}
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
 }
 
 footer {

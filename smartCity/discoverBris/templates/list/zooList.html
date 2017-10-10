@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+      <title>Zoos in Brisbane</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'list/list.css' %}" type="text/css"/>
+  </head>
+  <body>
+	  <div id="container">
+      {% include 'list/nav.html' %}
+  		<div id="topbar">
+  			<hr><header>
+  				<h1>Discover Brisbane</h1>
+  			</header><hr>
+  			<ul class="History">
+  			 <li><a href="{% url 'index' %}">Home</a></li>
+         <li>Zoos</li>
+  			</ul>
+  		</div><br><br>
+      {% for location in all_locations %}
+        {% if location.category == 'zoo' %}
+          {% include 'list/result.html' %}
+        {% endif %}
+      {% endfor %}
+      <footer>&copy; Discover Brisbane 2017</footer>
+    </div>
+  </body>
+</html>

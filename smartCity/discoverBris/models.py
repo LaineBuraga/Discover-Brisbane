@@ -54,7 +54,6 @@ class AuthUser(models.Model):
         #managed = False
         db_table = 'auth_user'
 
-
 class AuthUserGroups(models.Model):
     user = models.ForeignKey(AuthUser, models.DO_NOTHING)
     group = models.ForeignKey(AuthGroup, models.DO_NOTHING)
@@ -136,8 +135,7 @@ class DjangoSession(models.Model):
         #managed = False
         db_table = 'django_session'
 
-
-class Locations(models.Model):
+class Location(models.Model):
     location_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=256, blank=True, null=True)
     address = models.CharField(max_length=256, blank=True, null=True)
@@ -149,56 +147,8 @@ class Locations(models.Model):
     industry_type = models.CharField(max_length=45, blank=True, null=True)
 
     class Meta:
-        #managed = False
-        db_table = 'locations'
+        managed = False
+        db_table = 'location'
 
-
-class Users(models.Model):
-    user_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=45, blank=True, null=True)
-    surname = models.CharField(max_length=45, blank=True, null=True)
-    username = models.CharField(max_length=45, blank=True, null=True)
-    salt = models.CharField(max_length=256, blank=True, null=True)
-    password = models.CharField(max_length=256, blank=True, null=True)
-    phone_number = models.CharField(max_length=12, blank=True, null=True)
-    email = models.CharField(max_length=256, blank=True, null=True)
-    type = models.CharField(max_length=45, blank=True, null=True)
-
-    class Meta:
-        #managed = False
-        db_table = 'users'
-
-
-
-
-
-
-#old
-#class Locations(models.Model):
-#    location_id = models.AutoField(primary_key=True)
-#    name = models.CharField(max_length=256, blank=True, null=True)
-#    address = models.CharField(max_length=256, blank=True, null=True)
-#    phone_number = models.CharField(max_length=15, blank=True, null=True)
-#    email = models.CharField(max_length=256, blank=True, null=True)
-#    category = models.CharField(max_length=45, blank=True, null=True)
-#    photo_name = models.CharField(max_length=256, blank=True, null=True)
-#    departments = models.CharField(max_length=256, blank=True, null=True)
-#    industry_type = models.CharField(max_length=45, blank=True, null=True)
-
-#    class Meta:
-#        db_table = 'locations'
-
-
-#class Users(models.Model):
-#    user_id = models.AutoField(primary_key=True)
-#    name = models.CharField(max_length=45, blank=True, null=True)
-#    surname = models.CharField(max_length=45, blank=True, null=True)
-#    username = models.CharField(max_length=45, blank=True, null=True)
-#    salt = models.CharField(max_length=256, blank=True, null=True)
-#    password = models.CharField(max_length=256, blank=True, null=True)
-#    phone_number = models.CharField(max_length=12, blank=True, null=True)
-#    email = models.CharField(max_length=256, blank=True, null=True)
-#    type = models.CharField(max_length=45, blank=True, null=True)
-
-#    class Meta:
-#        db_table = 'users'
+    def __str__(self):
+       return self.name

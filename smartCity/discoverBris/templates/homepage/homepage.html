@@ -4,68 +4,62 @@
     <title>Discover Brisbane</title>
       {% load staticfiles %}
       <link rel="stylesheet" href="{% static 'homepage/homepage.css' %}" type="text/css"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
   </head>
   <body>
     <div id="topbar">
       <form id="searchbox">
-						<!-- <input id="search" type="text" placeholder="Search..." onchange="">
-						<input id="submit" type="submit" value="Search" onclick=""> -->
-            <button onclick="" class="register">Register</button>
-            <button onclick="" class="login">Login</button>
+        <input id="search" type="text" placeholder="Search..." onchange="">
+        <input id="submit" type="submit" value="Search" onclick="">
+        <button onclick="" class="register">Register</button>
+        <button onclick="" class="login">Login</button>
       </form>
     </div>
     <div id="container">
-      <hr><header>
-        <h1>Discover Brisbane</h1>
-      </header><hr><br>
-      <h2>General Information</h2>
-      <div class="content">
-        <div class="categories-left">
-          <a href="/parkList/"><img src="http://blog.budget.com.au/wp-content/uploads/2014/09/city-botanic-gardens.jpg" alt="Parks" class="image"></a>
-          <div class="box-text">Parks</div>
-        </div>
-        <div class="categories-right">
-          <a href=""><img src="http://www.visitbrisbane.com.au/~/media/articles/2015/october-2015/daisyhillkoalacentre_20151006_wide.ashx" alt="Zoos" class="image"></a>
-          <div class="box-text">Zoos</div>
-        </div>
-        <div class="categories-left">
-          <a href=""><img src="http://www.thecapitolapartments.com.au/assets/cache/12074679_1030485816982214_7509348486536051026_n-800x600.jpg" alt="Museums" class="image"></a>
-          <div class="box-text">Museums</div>
-        </div>
-        <div class="categories-right">
-          <a href=""><img src="https://www.bestrestaurants.com.au/image/destinations/best-restaurants-destinations-brisbane_970x290.jpg" alt="Restaurants" class="image"></a>
-          <div class="box-text">Restaurants</div>
-        </div>
-        <div class="categories-left">
-          <a href=""><img src="http://dreamstop.com/wp-content/uploads/2017/06/shopping-dream-meaning.jpg" alt="Malls" class="image"></a>
-          <div class="box-text">Malls</div>
-        </div>
+    <hr><header>
+      <h1>Discover Brisbane</h1>
+    </header><hr><br>
+    <h2>General Information</h2>
+    <div class="content">
+      <div class="categories-left">
+        <a href="/list/parkList/"><img src="{% static 'homepage/park.jpg' %}" alt="Parks" class="image"></a>
+        <div class="box-text">Parks</div>
       </div>
-      <div class="content">
-        <h2>Other Information</h2>
-        <div class="categories-left">
-          <a href="/collegeList/"><img src="http://www.augusta.edu/images/undergraduate.png" alt="Colleges" class="image"></a>
-          <div class="box-text">Colleges</div>
-        </div>
-        <div class="categories-right">
-          <a href=""><img src="http://www.kwa.com.au/images/projects/Millennium_Library_1.jpg" alt="Libraries" class="image"></a>
-          <div class="box-text">Libraries</div>
-        </div>
-        <div class="categories-left">
-          <a href=""><img src="http://www.fal-group.com/images/services/manufactoring.jpg" alt="Industries" class="image"></a>
-          <div class="box-text">Industries</div>
-        </div>
-        <div class="categories-right">
-          <a href="/locations/"><img src="https://exp.cdn-hotels.com/hotels/1000000/150000/140600/140596/140596_275_z.jpg" alt="Hotels" class="image"></a>
-          <div class="box-text">Hotels</div>
-        </div>
+      <div class="categories-right">
+        <a href="/list/zooList/"><img src="{% static 'homepage/zoo.jpg' %}" alt="Zoos" class="image"></a>
+        <div class="box-text">Zoos</div>
+      </div>
+      <div class="categories-left">
+        <a href="/list/museumList/"><img src="{% static 'homepage/museum.jpg' %}" alt="Museums" class="image"></a>
+        <div class="box-text">Museums</div>
+      </div>
+      <div class="categories-right">
+        <a href="/list/restaurantList/"><img src="{% static 'homepage/restaurant.jpg' %}" alt="Restaurants" class="image"></a>
+        <div class="box-text">Restaurants</div>
+      </div>
+      <div class="categories-left">
+        <a href="/list/mallList/"><img src="{% static 'homepage/mall.jpg' %}" alt="Malls" class="image"></a>
+        <div class="box-text">Malls</div>
+      </div>
+    </div>
+    <div class="content">
+      <h2>Other Information</h2>
+      <div class="categories-left">
+        <a href="/list/collegeList"><img src="{% static 'homepage/college.png' %}" alt="Colleges" class="image"></a>
+        <div class="box-text">Colleges</div>
+      </div>
+      <div class="categories-right">
+        <a href="/list/libraryList/"><img src="{% static 'homepage/library.jpg' %}" alt="Libraries" class="image"></a>
+        <div class="box-text">Libraries</div>
+      </div>
+      <div class="categories-left">
+        <a href="/list/industryList/"><img src="{% static 'homepage/industry.jpg' %}" alt="Industries" class="image"></a>
+        <div class="box-text">Industries</div>
+      </div>
+      <div class="categories-right">
+        <a href="/list/hotelList/"><img src="{% static 'homepage/hotel.jpg' %}" alt="Hotels" class="image"></a>
+        <div class="box-text">Hotels</div>
+      </div>
       </div><br><br><hr><br>
-      <div class="socialmedia">
-        <a href="http://www.youtube.com" class="fa fa-youtube"></a>
-        <a href="http://www.instagram.com" class="fa fa-instagram"></a>
-        <a href="http://www.twitter.com" class="fa fa-twitter"></a>
-      </div>
       <footer>&copy; Discover Brisbane 2017</footer>
     </div>
   </body>

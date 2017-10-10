@@ -1,7 +1,7 @@
 Show databases;
 use ifb299;
 show tables;
-describe client;
+#describe client;
 #drop table client;
 /*
 create table client(
@@ -15,3 +15,4 @@ create table client(
     client_type ENUM ('tourist', 'student', 'businessman'),	
     primary key ( client_id )
 );*/
+#rename table locations to location 

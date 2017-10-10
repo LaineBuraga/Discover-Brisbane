@@ -6,23 +6,24 @@
 		<link rel="stylesheet" href="{% static 'location/location2.css' %}" type="text/css"/>
 	</head>
 	<body>
+    {% include 'list/nav.html' %}
 		<div class="container">
 			<hr><header>
 				<h1>Discover Brisbane</h1>
 			</header><hr>
 			<ul class="breadcrumb">
-				<li><a href="#">Home</a></li>
+				<li><a href="/homepage/">Home</a></li>
 				<li><a href="#">{{ location.category }}</a></li>
 				<li>{{ location.name }}</li>
 			</ul>
 			{% with 'location/'|add:location.photo_name as image_static %}
-			<img src="{% static image_static %}" width="300" class="place">	
+			<img src="{% static image_static %}" width="300" class="place">
 			{% endwith %}
 			<article>
 				<h1>{{ location.name }}</h1>
 				<p>Address: {{ location.address }}</p>
 				<p>Phone No: {{ location.phone_number }}</p>
-				<p>Email: 
+				<p>Email:
 				{%if location.email == '' %}
 					None
 				{% else %}
