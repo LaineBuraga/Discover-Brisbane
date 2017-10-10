@@ -10,6 +10,9 @@ from django.http import Http404
 def index(request):
     return render(request, 'homepage/homepage.html', {})
 
+def registration(request):
+    return render(request, 'registration/registration.html', {})
+
 def locations(request):
     all_locations = Locations.objects.all()
     context = {'all_locations': all_locations}

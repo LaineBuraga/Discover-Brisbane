@@ -1,0 +1,78 @@
+header {
+    font-style: bold;
+    font-size: medium;
+    color: #D5D5FF;
+    padding: 5px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: #343536;
+}
+
+ul.History {
+    width: 100%;
+    /* padding: 5px ; */
+    list-style: none;
+    /* background-color: #E6E8EA; */
+}
+ul.History li {
+    display: inline;
+    font-size: 18px;
+    color: lightgray;
+}
+ul.History li+li:before {
+    padding: 8px;
+    color: grey;
+    content: "/\00a0";
+}
+ul.History li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.History li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: small;
+    font-weight: bold;
+    background-color: #BEBEFF;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+fieldset {
+    background-color: #E6E8EA;
+    line-height: 250%;    
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+fieldset > label {
+    color: gray;
+    font-size: x-small;
+    font-style: italic;
+}
+
+footer {
+    font-size: small;
+    font-style: italic;
+    background-color: #8DBFD7;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 20px;
+    text-align: center;
+}

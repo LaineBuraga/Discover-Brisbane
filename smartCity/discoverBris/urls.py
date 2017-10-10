@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^locations/(?P<location_id>[0-9]+)/$', views.location, name='location'),
     url(r'^collegeList/$', views.collegeList, name='college'),
     url(r'^parkList/$', views.parkList, name='park'),
+    url(r'^registration/$',views.registration, name='registration'),
 
     #static pages
     url(r'^success/$', views.successView, name='success')
