@@ -32,7 +32,7 @@ button.register {
   border-style: none;
 }
 
-button.login {
+button.logout {
   margin-left: 1%;
   padding: 0.5%;
   font-size: 100%;
@@ -79,7 +79,7 @@ h2 {
   float: left;
 }
 
-.slides {
+.images {
   width:100%;
   height: 100%;
   opacity: 1;
@@ -88,52 +88,7 @@ h2 {
   backface-visibility: hidden;
 }
 
-/*
-
-.collection {
-  display: none;
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-*/
-
-.collection {
-  margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.6;
-  filter: alpha(opacity=60); 
-}
-
-.collection p {
-  margin: 5%;
-  font-weight: bold;
-  color: #000000;
-}
-
-
-
-
-
-
-.slide_container {
+.slide_container, .individual, .text {
   width: 60%;
   height: 300px;
   margin-left: auto;
