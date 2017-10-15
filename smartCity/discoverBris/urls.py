@@ -6,6 +6,10 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^locations/$', views.locations, name='locations'),
     url(r'^locations/(?P<location_id>[0-9]+)/$', views.location, name='location'),
+<<<<<<< HEAD
+    url(r'^registration/$',views.registration, name='registration'),
+
+=======
     #result list
     url(r'^list/collegeList$', views.collegeList, name='college'),
     url(r'^list/hotelList/$', views.hotelList, name='hotel'),
@@ -20,6 +24,7 @@ urlpatterns = [
     url(r'^business/$', views.business, name='business'),
     url(r'^student/$', views.student, name='student'),
     url(r'^tourist/$', views.tourist, name='tourist'),
+>>>>>>> 50d313a9d8a97f75823e354b49d98092dfc68765
     #static pages
     #url(r'^success/$', views.successView, name='success')
 ]

@@ -12,6 +12,9 @@ def index(request):
     context = {'all_locations': all_locations}
     return render(request, 'homepage/homepage.html', context)
 
+def registration(request):
+    return render(request, 'registration/registration.html', {})
+
 def locations(request):
     all_locations = Location.objects.all()
     context = {'all_locations': all_locations}
