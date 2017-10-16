@@ -1,0 +1,150 @@
+body {
+  width: 100%;
+  background-image: url("/static/account/student.jpg");
+}
+
+.title {
+  color: darkblue;
+  width: 100%;
+  font-size: 130%;
+  text-align: center;
+  font-weight: lighter;
+}
+
+#container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: white;
+}
+
+#topbar {
+  text-align: right;
+  margin-right: 12%;
+}
+
+button.register {
+  margin-left: 2%;
+  padding: 0.5%;
+  font-size: 100%;
+  border-color: white;
+  background-color: white;
+  border-style: none;
+}
+
+button.logout {
+  margin-left: 1%;
+  padding: 0.5%;
+  font-size: 100%;
+  border-color: white;
+  background-color: white;
+  border-style: none;
+}
+
+header {
+  font-size: 150%;
+  text-align: center;
+  font-variant: small-caps;
+  font-weight: bold;
+  color: black;
+  border-color: lightgrey;
+  border-style:grove;
+  padding: 1em;
+  clear: left;
+}
+
+hr {
+  height: 3px;
+  background-color: grey;
+  border-color: lightgrey;
+  border-style:grove;
+}
+
+html, body {
+  height:100%;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.template {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tile-left, .tile-middle, .tile-right {
+  width: 30%;
+  height:20%;
+  float: left;
+  margin-left: 2.5%;
+  border-radius: 10%;
+  border: 3.5px dotted black;
+  margin-bottom: 5%;
+}
+
+.label {
+  border-radius: 10%;
+  background-color: #e7430c;
+  padding: 20%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size:300%;
+}
+
+.label:hover {
+  cursor:pointer;
+  background-color: #e7ca1c;
+}
+
+.other {
+  clear: both;
+  font-size: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: black;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.other-link1, .other-link2, .other-link3 {
+  padding: 2%;
+  width: 20%;
+  border: 2px solid black;
+  border-radius: 30%;
+  float:left;
+  background-color: black;
+}
+
+.other-link1 {
+  margin-left: 25%;
+}
+
+.other-link2, .other-link3 {
+    margin-left: 2.5%;
+}
+
+.other-link1:hover, .other-link2:hover, .other-link3 {
+  font-size: 120%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  margin-top: 15%;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+  font-size: 80%;
+}

@@ -135,11 +135,11 @@ create table hotel (
     address VARCHAR(255) NOT NULL,
     phone_number CHAR(10),
     email VARCHAR(255),
-    category_id INT NOT NULL,
     photo_name VARCHAR(255),
-    foreign key ( category_id ) references category ( category_id),
     primary key ( hotel_id )
 );*/
+
+#describe hotel;
 
 #create view for hotels from Location table -- to transfer details to hotel table
 /*create view forHotel as 
@@ -148,9 +148,9 @@ select name, address, phone_number, email, photo_name from location where catego
 create view justHotel as 
 select category_id from category where category_name = 'Hotels';
 
-Insert into hotel ( hotel_name, address, email, category_id, photo_name )
-select name, address, email, category_id, photo_name 
-from forHotel natural join justHotel; 
+Insert into hotel ( hotel_name, address, email, photo_name )
+select name, address, email, photo_name 
+from forHotel; 
 
 #insert numbers without spaces in between -- exactly 10 digits
 Update hotel
@@ -160,6 +160,8 @@ where hotel_name = 'Treasury Hotel';
 Update hotel
 set phone_number = '0738536000'
 where hotel_name = 'The Sebel Quay West Brisbane';
+
+select * from hotel;
 */
 
 #create table for parks
@@ -281,6 +283,7 @@ create table restaurant (
     primary key ( restaurant_id )
 );*/
 
+
 #create view for restaurants from Location table -- to transfer details to restaurant table
 /*create view forRes as 
 select name, address, email, photo_name from location where category = 'restaurant';
@@ -334,9 +337,96 @@ where mall_name ='Myer Centre, Brisbane';
 
 Update mall
 set phone_number = '0730066290'
-where mall_name = 'Queen Street Mall';
-*/
-#syntax to change all category_name column to just name
-/*alter table restaurant change `restaurant_name` `name` VARCHAR(255) NOT NULL;
-describe restaurant*/
+where mall_name = 'Queen Street Mall';*/
 
+#syntax to change all category_name column to just name
+/*alter table hotel change `hotel_name` `name` VARCHAR(255) NOT NULL;
+describe hotel;*/
+
+#reuse queries below to remove foreign keys in individual category table
+/*show create table museum;
+alter table hotel drop foreign key hotel_ibfk_1;
+alter table hotel drop column category_id;
+select * from hotel;*/
+
+#delete category table
+#SHOW ENGINE INNODB STATUS;
+#drop table category;
+
+ /*
+#create a summary table of all locations
+create table locationSummary (
+	location_id INT auto_increment,
+    name VARCHAR(255) NOT NULL, 
+    category VARCHAR (255) NOT NULL,
+	primary key ( location_id ),
+    foreign key college_id_fk ( name ) references college ( name ) ON UPDATE CASCADE ON DELETE NO ACTION,
+    foreign key library_id_fk ( name ) references library ( name ) ON UPDATE CASCADE ON DELETE NO ACTION,
+    foreign key industry_id_fk ( name ) references industry ( name ) ON UPDATE CASCADE ON DELETE NO ACTION,
+    foreign key hotel_id_fk ( name ) references hotel ( name ) ON UPDATE CASCADE ON DELETE NO ACTION,
+    foreign key park_id_fk ( name ) references park ( name ) ON UPDATE CASCADE ON DELETE NO ACTION,
+    foreign key zoo_id_fk ( name ) references zoo ( name ) ON UPDATE CASCADE ON DELETE NO ACTION,
+    foreign key museum_id_fk ( name ) references museum ( name ) ON UPDATE CASCADE ON DELETE NO ACTION,
+    foreign key restaurant_id_fk ( name ) references restaurant ( name ) ON UPDATE CASCADE ON DELETE NO ACTION,
+    foreign key mall_id_fk ( name ) references mall ( name ) ON UPDATE CASCADE ON DELETE NO ACTION
+);*/
+
+#INSERT INTO locationSummary (name, category) VALUES
+ #   ( (SELECT name from college WHERE college_id=1), 'College' );
+
+/*
+select name, address, departments, null, null, email, photo_name from college 
+union 
+select name, address, null, null, phone_number, email, photo_name from library
+union 
+select name, address, null, industry_type, null, email, photo_name from industry
+union 
+select name, address, null, null, phone_number, email, photo_name from hotel
+union
+select name, address, null, null, phone_number, email, photo_name from park
+union
+select name, address, null, null, phone_number, email, photo_name from zoo
+union
+select name, address, null, null, phone_number, email, photo_name from museum
+union
+select name, address, null, null, phone_number, email, photo_name from restaurant
+union
+select name, address, null, null, phone_number, email, photo_name from mall;*/
+
+/*
+Update location
+set category = 'Mall'
+where location_id = 18 or location_id = 19; 
+select * from location;*/
+
+#drop all views 
+/*drop view justcol;
+drop view justhotel;
+drop view justind;
+drop view justlib;
+drop view justmall;
+drop view justmuse;
+drop view justpark;
+drop view justres;
+drop view justzoo;*/
+show tables;
+/*
+alter table location 
+	add constraint college_id_fk foreign key ( name, address, departments, email, photo_name ) references college ( name, address, departments, email, photo_name ) 
+		ON UPDATE CASCADE ON DELETE NO ACTION,
+    add constraint library_id_fk foreign key ( name, address, phone_number, email, photo_name ) references library ( name, address, phone_number, email, photo_name ) 
+		ON UPDATE CASCADE ON DELETE NO ACTION,
+    add constraint industry_id_fk foreign key ( name, address, industry_type, email, photo_name ) references industry ( name, address, industry_type, email, photo_name ) 
+		ON UPDATE CASCADE ON DELETE NO ACTION,
+    add constraint hotel_id_fk foreign key ( name, address, phone_number, email, photo_name ) references hotel ( name, address, phone_number, email, photo_name ) 
+		ON UPDATE CASCADE ON DELETE NO ACTION,
+    add constraint park_id_fk foreign key ( name, address, phone_number, email, photo_name ) references park ( name, address, phone_number, email, photo_name ) 
+		ON UPDATE CASCADE ON DELETE NO ACTION,
+    add constraint zoo_id_fk foreign key ( name, address, phone_number, email, photo_name ) references zoo ( name, address, phone_number, email, photo_name ) 
+		ON UPDATE CASCADE ON DELETE NO ACTION,
+    add constraint museum_id_fk foreign key ( name, address, phone_number, email, photo_name ) references museum ( name, address, phone_number, email, photo_name ) 
+		ON UPDATE CASCADE ON DELETE NO ACTION,
+    add constraint restaurant_id_fk foreign key ( name, address, phone_number, email, photo_name ) references restaurant ( name, address, phone_number, email, photo_name ) 
+		ON UPDATE CASCADE ON DELETE NO ACTION,
+    add constraint mall_id_fk foreign key ( name, address, phone_number, email, photo_name ) references mall ( name, address, phone_number, email, photo_name ) 
+		ON UPDATE CASCADE ON DELETE NO ACTION;*/
