@@ -73,6 +73,13 @@ class AuthUserUserPermissions(models.Model):
         db_table = 'auth_user_user_permissions'
         unique_together = (('user', 'permission'),)
 
+#class Category(models.Model):
+#    category_id = models.AutoField(primary_key=True)
+#    category_name = models.CharField(unique=True, max_length=255)
+
+#    class Meta:
+#        managed = False
+#        db_table = 'category'
 
 class Client(models.Model):
     client_id = models.AutoField(primary_key=True)

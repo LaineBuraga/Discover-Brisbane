@@ -30,8 +30,8 @@ create table category (
 	category_id INT auto_increment,
     category_name VARCHAR(255) NOT NULL UNIQUE,
     primary key ( category_id )
-);*/
-
+);
+*/
 #inserting values for category table
 /*insert into category ( category_name ) 
 values ( 'Colleges' ), ( 'Libraries' ), ( 'Industries' ), ( 'Hotels' ), ( 'Parks' ), ( 'Zoos' ), ( 'Museums' ), ( 'Restaurants' ), ( 'Malls' )
