@@ -1,0 +1,10 @@
+<form class="registration-form" action="" method="post">
+    {% csrf_token %}
+    {% include 'form-template/form-template.html' %}
+    <div class="form-group">
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+
+</form>

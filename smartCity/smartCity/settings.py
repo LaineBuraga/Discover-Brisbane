@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# AUTH
+AUTH_USER_MODEL = 'discoverBris.Client'
 
 # Application definition
 

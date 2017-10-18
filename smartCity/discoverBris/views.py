@@ -1,9 +1,17 @@
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_protect
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
 from .models import Location, Client
+from django.views import generic
+from django.views.generic import View
 from django.http import Http404
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.core.urlresolvers import reverse_lazy
+from django.contrib import messages
 
+#temp form
+from .forms import ClientForm, ClientLogin
 
 # Create your views here.
 
@@ -14,6 +22,68 @@ def index(request):
 
 def registration(request):
     return render(request, 'registration/registration.html', {})
+
+#temp registration form
+class ClientFormView(View):
+    form_class = ClientForm
+    template_name = 'registration/registrationtemp.html'
+    # display blank form
+    def get(self, request):
+        form = self.form_class(None)
+        return render(request, self.template_name, {'form': form})
+    # process form data
+    def post(self, request):
+        form = self.form_class(request.POST)
+
+        if form.is_valid():
+            client = form.save(commit=False)
+
+            # cleaned (normalised) data
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            client.set_password(password)
+            client.save()
+
+            # returns Client objects if credentials are correct
+            client = authenticate(email=email, password=password)
+
+            # log client in if successful authenication
+            if client is not None:
+                if client.is_active:
+                    login(request, client)
+                    return redirect('index')
+                
+        return render(request, self.template_name, {'form': form})
+
+
+class ClientLoginView(View):
+    form_class = ClientLogin
+    template_name = 'login/login.html'
+    # display blank form
+    def get(self, request):
+        form = self.form_class(None)
+        return render(request, self.template_name, {'form': form})
+    # process form data
+    def post(self, request):
+        form = self.form_class(request.POST)
+        
+        # get post data
+        username = request.POST.get('username', '')
+        password = request.POST.get('password', '')
+
+        # returns Client objects if credentials are correct
+        client = authenticate(username=username, password=password)
+        
+        # log client in if successful authenication
+        if client is not None:
+            if client.is_active:
+                login(request, client)
+                
+                return redirect('index')
+                
+        return render(request, self.template_name, {'form': form})
+
+
 
 def locations(request):
     all_locations = Location.objects.all()
