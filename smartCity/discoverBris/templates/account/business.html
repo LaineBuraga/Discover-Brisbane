@@ -3,8 +3,25 @@
   <head>
     <title>Discover Brisbane - Business View</title>
     {% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'account/account.css' %}" type="text/css"/>
-
+    <link rel="stylesheet" href="{% static 'account/student.css' %}" type="text/css"/>
+    <style>
+      body {
+        background-image: url("/static/account/business.jpeg");
+      }
+      .label {
+        border-radius: 10%;
+        background: #174c7c;
+        padding: 20%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 300%;
+      }
+      .label:hover {
+        cursor:pointer;
+        background-color: black;
+      }
+    </style>
   </head>
   <body>
     <div id="topbar">
@@ -14,33 +31,57 @@
       <hr><header>
         <h1>Discover Brisbane</h1>
       </header><hr><br>
-      <div class="left">
-        <br><br><br><br><br><br><br><br><br><br><br>
-        <button class="right_arrow" onclick="plusDivs(1)">&#10095;</button>
+      <h2 class="title">Welcome To Your Business View!</h2><br><br>
+      <div class="template">
+        <div class="tile-left">
+          <div class="label">
+            <a href="/list/hotelList/">Hotels</a>
+          </div>
+        </div>
+        <div class="tile-middle">
+          <div class="label">
+            <a href="/list/industryList/">Industries</a>
+          </div>
+        </div>
+        <div class="tile-right">
+          <div class="label">
+            <a href="/list/parkList/">Parks</a>
+          </div>
+        </div>
       </div>
-      <div class="right">
-        <br><br><br><br><br><br><br><br><br><br><br>
-        <button class="left_arrow" onclick="plusDivs(-1)">&#10094;</button>
+      <div class="template">
+        <div class="tile-left">
+          <div class="label">
+            <a href="/list/zooList/">Zoos</a>
+          </div>
+        </div>
+        <div class="tile-middle">
+          <div class="label">
+            <a href="/list/museumList/">Museums</a>
+          </div>
+        </div>
+        <div class="tile-right">
+          <div class="label">
+            <a href="/list/restaurantList/">Restaurants</a>
+          </div>
+        </div>
+      </div><div class="template">
+        <div class="tile-left">
+          <div class="label">
+            <a href="/list/mallList/">Malls</a>
+          </div>
+        </div>
       </div>
-      <h2 class="title">Welcome To Your Personalised Business View!</h2><br>
-      <div class="slide_container">
-        <a href="/list/hotelList/"><img class="slides" src="{% static 'homepage/hotel.jpg' %}">
-        <a href="/list/industryList/"><img class="slides" src="{% static 'homepage/industry.jpg' %}">
-        <a href="/list/parkList/"><img class="slides" src="{% static 'homepage/park.jpg' %}">
-        <a href="/list/zooList/"><img class="slides" src="{% static 'homepage/zoo.jpg' %}">
-        <a href="/list/museumList/"><img class="slides" src="{% static 'homepage/museum.jpg' %}">
-        <a href="/list/restaurantList/"><img class="slides" src="{% static 'homepage/restaurant.jpg' %}">
-        <a href="/list/mallList/"><img class="slides" src="{% static 'homepage/mall.jpg' %}">
-      </div><br>
-    </div>
     <div class='other'>
-      <h3>Other categories:</h3>
-      <a href="/list/collegeList/">Colleges in Brisbane</a>
-      &nbsp &nbsp &nbsp &nbsp &nbsp
-      <a href="/list/libraryList/">Libraries in Brisbane</a><br><br><br><hr>
-    </div><br><br><br>
+      <h3>More for you to explore...</h3>
+      <div class="other-link1">
+        <a href="/list/collegeList/">Colleges in Brisbane</a>
+      </div>
+      <div class="other-link2">
+        <a href="/list/libraryList/">Libraries in Brisbane</a>
+      </div>
+    </div>
     <footer>&copy; Discover Brisbane 2017</footer>
-    <script src="{% static 'account/account.js' %}"></script>
   </div>
   </body>
 </html>

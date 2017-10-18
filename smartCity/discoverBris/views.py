@@ -128,7 +128,7 @@ def parkList(request):
 
 def restaurantList(request):
     all_locations = Location.objects.all()
-    return render(request, 'list/restauranList.html', {'all_locations': all_locations})
+    return render(request, 'list/restaurantList.html', {'all_locations': all_locations})
 
 def zooList(request):
     all_locations = Location.objects.all()

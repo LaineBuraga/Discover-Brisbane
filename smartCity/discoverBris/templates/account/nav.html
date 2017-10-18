@@ -1,0 +1,14 @@
+{% block content %}
+<head>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'account/account.css' %}" type="text/css"/>
+</head>
+<div id="topbar">
+  <form id="searchbox">
+    <input id="search" type="text" placeholder="Search..." onchange="">
+    <input id="submit" type="submit" value="Search" onclick="">
+    <button onclick="" class="register">Register</button>
+    <button onclick="" class="logout">Logout</button>
+  </form>
+</div>
+{% endblock %}
