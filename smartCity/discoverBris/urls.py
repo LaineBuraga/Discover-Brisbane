@@ -9,6 +9,8 @@ urlpatterns = [
 
     url(r'^registration/$',views.registration, name='registration'),
     url(r'^login/$',views.ClientLoginView.as_view(), name='login'),
+    url(r'^logout/$',views.logoutView, name='logout'),
+    url(r'^search/$',views.searchLocations, name='searchLocations'),
     #temp
     url(r'^registrationtemp/$',views.ClientFormView.as_view(), name='registrationtemp'),
 

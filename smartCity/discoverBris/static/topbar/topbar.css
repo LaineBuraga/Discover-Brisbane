@@ -1,0 +1,45 @@
+#topbar {
+    text-align: right;
+    margin-right: 12%;
+  }
+  form.searchbox{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  input.search {
+    display: inline-block;
+  }
+  input.submit {
+    display: inline-block;
+  }
+  
+  button.register {
+    margin-left: 2%;
+    padding: 0.5%;
+    font-size: 100%;
+    border-color: white;
+    background-color: white;
+    border-style: none;
+    display: inline-block;
+  }
+  
+  button.login {
+    margin-left: 1%;
+    padding: 0.5%;
+    font-size: 100%;
+    border-color: white;
+    background-color: white;
+    border-style: none;
+    display: inline-block;
+  }
+  
+  button.logout {
+    margin-left: 1%;
+    padding: 0.5%;
+    font-size: 100%;
+    border-color: white;
+    background-color: white;
+    border-style: none;
+    display: inline-block;
+  }

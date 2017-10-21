@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from .models import Location, Client
 from django.views import generic
 from django.views.generic import View
@@ -83,7 +83,19 @@ class ClientLoginView(View):
                 
         return render(request, self.template_name, {'form': form})
 
+def logoutView(request):
+    logout(request)
+    return render(request, 'logout/logout.html', {})
 
+def searchLocations(request):
+    if request.method == "POST":
+        searchText = request.POST.get('search', '')
+    else:
+        searchText = ''
+
+    locations = Location.objects.filter(name__icontains=searchText) | Location.objects.filter(category__icontains=searchText)
+
+    return render(request, 'search/search.html', {'locations' : locations})
 
 def locations(request):
     all_locations = Location.objects.all()

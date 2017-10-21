@@ -6,14 +6,7 @@
       <link rel="stylesheet" href="{% static 'homepage/homepage.css' %}" type="text/css"/>
   </head>
   <body>
-    <div id="topbar">
-      <form id="searchbox">
-        <input id="search" type="text" placeholder="Search..." onchange="">
-        <input id="submit" type="submit" value="Search" onclick="">
-        <button onclick="" class="register">Register</button>
-        <button onclick="" class="login">Login</button>
-      </form>
-    </div>
+    {% include 'topbar/topbar.html' %}
     <div id="container">
     <hr><header>
       <h1>Discover Brisbane</h1>
