@@ -4,6 +4,22 @@
     <title>Discover Brisbane - Student View</title>
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'account/student.css' %}" type="text/css"/>
+    <style>
+      .other-link1 {
+        margin-left: 12%;
+      }
+
+      .other-link3:hover {
+        font-size: 120%;
+      }
+
+      .other-link3 {
+        font-size: 100%;
+        background-color: gold;
+        border-color: gold;
+        margin-left: 2.5%;
+      }
+    </style>
   </head>
   <body>
     <div id="topbar">
@@ -61,6 +77,9 @@
       </div>
       <div class="other-link2">
         <a href="/list/industryList/">Industries in Brisbane</a>
+      </div>
+      <div class="other-link3">
+        <a href="/feedback/" style="color:black">Tell us what you think!</a>
       </div>
     </div>
     <footer>&copy; Discover Brisbane 2017</footer>
