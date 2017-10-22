@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^locations/$', views.locations, name='locations'),
     url(r'^locations/(?P<location_id>[0-9]+)/$', views.location, name='location'),
+    url(r'^userview/$',views.userview, name='userview'),
 
     url(r'^registration/$',views.registration, name='registration'),
     url(r'^login/$',views.ClientLoginView.as_view(), name='login'),

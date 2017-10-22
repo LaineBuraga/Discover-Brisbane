@@ -17,6 +17,8 @@ from .forms import ClientForm, ClientLogin
 
 def index(request):
     all_locations = Location.objects.all()
+    if request.user.is_authenticated():
+        return redirect('userview')
     context = {'all_locations': all_locations}
     return render(request, 'homepage/homepage.html', context)
 
@@ -79,7 +81,7 @@ class ClientLoginView(View):
             if client.is_active:
                 login(request, client)
                 
-                return redirect('index')
+                return redirect('userview')
                 
         return render(request, self.template_name, {'form': form})
 
@@ -108,6 +110,11 @@ def location(request, location_id):
     except Locations.DoesNotExist:
         raise Http404("Location does not exist")
     return render(request, 'location/location.html', {'location': location})
+
+def userview(request):
+    current_username = request.user.get_username()
+    client = Client.objects.get(username=current_username)
+    return render(request, 'userview/userview.html', {'client': client})
 
 #result list --- test!
 def collegeList(request):

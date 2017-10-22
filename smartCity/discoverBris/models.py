@@ -161,4 +161,4 @@ class Client(AbstractUser):
         db_table = 'client'
     
     def __str__(self):
-        return self.firstname + " " + self.lastname
+        return self.first_name + " " + self.last_name

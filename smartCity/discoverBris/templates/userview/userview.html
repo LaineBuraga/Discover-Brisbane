@@ -1,0 +1,22 @@
+
+{% if user.is_authenticated %}
+    {% if client.client_type == 'Business' %}
+        {% include 'account/business.html' %}
+    {% elif client.client_type == 'Student' %}
+        {% include 'account/student.html' %}
+    {% elif client.client_type == 'Tourist' %}
+        {% include 'account/tourist.html' %}
+    {% endif %}
+{% else %}
+<script>
+    function redirect(){
+        window.location.href = "/login/";
+    }
+    setTimeout(redirect, 3000); //3000 is equivalent to 3 seconds
+</script>
+
+<div>
+    <p>Please log in first</p>
+    <p>Redirecting to Login...</p> 
+</div> 
+{% endif %}
