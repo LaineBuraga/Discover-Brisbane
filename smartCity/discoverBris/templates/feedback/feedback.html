@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Discover Brisbane</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'homepage/homepage.css' %}" type="text/css"/>
+      <style>
+        .feedbackform {
+          width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        button {
+          background-color: #4CAF50;
+          border: none;
+          color: white;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          padding: 2%;
+        }
+      </style>
+  </head>
+  <body>
+    {% include 'topbar/topbar.html' %}
+    <div id="container">
+      <hr><header>
+        <h1>Discover Brisbane</h1>
+      </header><hr><br>
+      <h2 style="text-align:center">Tell us what you think!</h2>
+      <div class="feedbackform">
+        <form class="feedback-form" method="post">
+          {% csrf_token %}
+          {% include 'form-template/form-template.html' %}
+          <div class="form-group">
+              <div class="button">
+                  <button type="submit">Submit</button>
+              </div>
+          </div>
+        </form>
+      </div><br><br><hr><br>
+      <footer>&copy; Discover Brisbane 2017</footer>
+    </div>
+  </body>
+</html>

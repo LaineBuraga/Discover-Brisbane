@@ -28,4 +28,6 @@ urlpatterns = [
     url(r'^business/$', views.business, name='business'),
     url(r'^student/$', views.student, name='student'),
     url(r'^tourist/$', views.tourist, name='tourist'),
+    #feedback
+    url(r'^feedback/$', views.FeedbackFormView.as_view(), name='feedback'),
 ]

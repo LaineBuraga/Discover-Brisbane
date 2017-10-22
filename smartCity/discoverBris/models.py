@@ -56,6 +56,9 @@ class AuthUser(models.Model):
         #managed = False
         db_table = 'auth_user'
 
+    def __str__(self):
+        return self.first_name + " " + self.last_name
+
 class AuthUserGroups(models.Model):
     user = models.ForeignKey(AuthUser, models.DO_NOTHING)
     group = models.ForeignKey(AuthGroup, models.DO_NOTHING)
@@ -152,3 +155,14 @@ class Client(AbstractUser):
 
     def __str__(self):
         return self.firstname + " " + self.lastname
+
+class Feedback(models.Model):
+    email = models.CharField(primary_key=True, max_length=255)
+    message = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'feedback'
+
+    def __str__(self):
+        return self.email

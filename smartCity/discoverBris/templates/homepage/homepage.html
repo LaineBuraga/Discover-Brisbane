@@ -4,61 +4,67 @@
     <title>Discover Brisbane</title>
       {% load staticfiles %}
       <link rel="stylesheet" href="{% static 'homepage/homepage.css' %}" type="text/css"/>
-      <style>
-        body {
-          background-image: url("/static/homepage/bris.jpg");
-        }
-      </style>
   </head>
   <body>
     {% include 'topbar/topbar.html' %}
     <div id="container">
-    <hr><header>
-      <h1>Discover Brisbane</h1>
-    </header><hr><br>
-    <h2>General Information</h2>
-    <div class="content">
-      <div class="categories-left">
-        <a href="/list/parkList/"><img src="{% static 'homepage/park.jpg' %}" alt="Parks" class="image"></a>
-        <div class="box-text">Parks</div>
+      <hr><header>
+        <h1>Discover Brisbane</h1>
+      </header><hr><br>
+      <h2>General Information</h2>
+      <div class="content">
+        <div class="categories-left">
+          <a href="/list/parkList/"><img src="{% static 'homepage/park.jpg' %}" alt="Parks" class="image"></a>
+          <div class="box-text">Parks</div>
+        </div>
+        <div class="categories-right">
+          <a href="/list/zooList/"><img src="{% static 'homepage/zoo.jpg' %}" alt="Zoos" class="image"></a>
+          <div class="box-text">Zoos</div>
+        </div>
+        <div class="categories-left">
+          <a href="/list/museumList/"><img src="{% static 'homepage/museum.jpg' %}" alt="Museums" class="image"></a>
+          <div class="box-text">Museums</div>
+        </div>
+        <div class="categories-right">
+          <a href="/list/restaurantList/"><img src="{% static 'homepage/restaurant.jpg' %}" alt="Restaurants" class="image"></a>
+          <div class="box-text">Restaurants</div>
+        </div>
+        <div class="categories-left">
+          <a href="/list/mallList/"><img src="{% static 'homepage/mall.jpg' %}" alt="Malls" class="image"></a>
+          <div class="box-text">Malls</div>
+        </div>
       </div>
-      <div class="categories-right">
-        <a href="/list/zooList/"><img src="{% static 'homepage/zoo.jpg' %}" alt="Zoos" class="image"></a>
-        <div class="box-text">Zoos</div>
-      </div>
-      <div class="categories-left">
-        <a href="/list/museumList/"><img src="{% static 'homepage/museum.jpg' %}" alt="Museums" class="image"></a>
-        <div class="box-text">Museums</div>
-      </div>
-      <div class="categories-right">
-        <a href="/list/restaurantList/"><img src="{% static 'homepage/restaurant.jpg' %}" alt="Restaurants" class="image"></a>
-        <div class="box-text">Restaurants</div>
-      </div>
-      <div class="categories-left">
-        <a href="/list/mallList/"><img src="{% static 'homepage/mall.jpg' %}" alt="Malls" class="image"></a>
-        <div class="box-text">Malls</div>
-      </div>
-    </div>
-    <div class="content">
-      <h2>Other Information</h2>
-      <div class="categories-left">
-        <a href="/list/collegeList"><img src="{% static 'homepage/college.png' %}" alt="Colleges" class="image"></a>
-        <div class="box-text">Colleges</div>
-      </div>
-      <div class="categories-right">
-        <a href="/list/libraryList/"><img src="{% static 'homepage/library.jpg' %}" alt="Libraries" class="image"></a>
-        <div class="box-text">Libraries</div>
-      </div>
-      <div class="categories-left">
-        <a href="/list/industryList/"><img src="{% static 'homepage/industry.jpg' %}" alt="Industries" class="image"></a>
-        <div class="box-text">Industries</div>
-      </div>
-      <div class="categories-right">
-        <a href="/list/hotelList/"><img src="{% static 'homepage/hotel.jpg' %}" alt="Hotels" class="image"></a>
-        <div class="box-text">Hotels</div>
-      </div>
-      </div><br><br><hr><br>
-      <footer>&copy; Discover Brisbane 2017</footer>
+      <div class="content">
+        <h2>Other Information</h2>
+        <div class="categories-left">
+          <a href="/list/collegeList"><img src="{% static 'homepage/college.png' %}" alt="Colleges" class="image"></a>
+          <div class="box-text">Colleges</div>
+        </div>
+        <div class="categories-right">
+          <a href="/list/libraryList/"><img src="{% static 'homepage/library.jpg' %}" alt="Libraries" class="image"></a>
+          <div class="box-text">Libraries</div>
+        </div>
+        <div class="categories-left">
+          <a href="/list/industryList/"><img src="{% static 'homepage/industry.jpg' %}" alt="Industries" class="image"></a>
+          <div class="box-text">Industries</div>
+        </div>
+        <div class="categories-right">
+          <a href="/list/hotelList/"><img src="{% static 'homepage/hotel.jpg' %}" alt="Hotels" class="image"></a>
+          <div class="box-text">Hotels</div>
+        </div>
+        </div>
+        <div class="content">
+          <h2 style="color:red">And more!</h2>
+          <div class="categories-left">
+            <a href="/feedback/feedback"><img src="{% static 'homepage/feedback.jpg' %}" alt="Feedback" class="image"></a>
+            <div class="box-text">Tell us what you think!</div>
+          </div>
+          <div class="categories-right">
+            <a href=""><img src="{% static 'homepage/staytuned.png' %}" alt="Coming Soon" class="image"></a>
+            <div class="box-text">More coming soon!</div>
+          </div>
+        </div><br><br><hr><br>
+        <footer>&copy; Discover Brisbane 2017</footer>
     </div>
   </body>
 </html>
