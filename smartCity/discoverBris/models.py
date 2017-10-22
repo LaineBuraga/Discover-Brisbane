@@ -56,6 +56,9 @@ class AuthUser(models.Model):
         #managed = False
         db_table = 'auth_user'
 
+    def __str__(self):
+        return self.first_name + " " + self.last_name
+
 class AuthUserGroups(models.Model):
     user = models.ForeignKey(AuthUser, models.DO_NOTHING)
     group = models.ForeignKey(AuthGroup, models.DO_NOTHING)
@@ -74,16 +77,6 @@ class AuthUserUserPermissions(models.Model):
         managed = False
         db_table = 'auth_user_user_permissions'
         unique_together = (('user', 'permission'),)
-
-#class Category(models.Model):
-#    category_id = models.AutoField(primary_key=True)
-#    category_name = models.CharField(unique=True, max_length=255)
-
-#    class Meta:
-#        managed = False
-#        db_table = 'category'
-
-
 
 class DjangoAdminLog(models.Model):
     action_time = models.DateTimeField()
@@ -145,7 +138,7 @@ class Location(models.Model):
 
     def __str__(self):
        return self.name
-    
+
 class Client(AbstractUser):
     client_id = models.AutoField(primary_key=True)
     #email = models.CharField(unique=True, max_length=255)
@@ -159,6 +152,18 @@ class Client(AbstractUser):
     class Meta:
         #managed = False
         db_table = 'client'
-    
+
     def __str__(self):
         return self.first_name + " " + self.last_name
+        return self.firstname + " " + self.lastname
+
+class Feedback(models.Model):
+    email = models.CharField(primary_key=True, max_length=255)
+    message = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = 'feedback'
+
+    def __str__(self):
+        return self.email

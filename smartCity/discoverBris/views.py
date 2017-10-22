@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from .models import Location, Client
+from .models import Location, Client, Feedback
 from django.views import generic
 from django.views.generic import View
 from django.http import Http404
@@ -11,7 +11,7 @@ from django.core.urlresolvers import reverse_lazy
 from django.contrib import messages
 
 #temp form
-from .forms import ClientForm, ClientLogin
+from .forms import ClientForm, ClientLogin, FeedbackForm
 
 # Create your views here.
 
@@ -49,12 +49,12 @@ class ClientFormView(View):
             # returns Client objects if credentials are correct
             client = authenticate(email=email, password=password)
 
-            # log client in if successful authenication
+            # log client in if successful authentication
             if client is not None:
                 if client.is_active:
                     login(request, client)
                     return redirect('index')
-                
+
         return render(request, self.template_name, {'form': form})
 
 
@@ -68,21 +68,27 @@ class ClientLoginView(View):
     # process form data
     def post(self, request):
         form = self.form_class(request.POST)
-        
+
         # get post data
         username = request.POST.get('username', '')
         password = request.POST.get('password', '')
 
         # returns Client objects if credentials are correct
         client = authenticate(username=username, password=password)
-        
-        # log client in if successful authenication
+
+        # log client in if successful authentication
         if client is not None:
             if client.is_active:
                 login(request, client)
+<<<<<<< .merge_file_a01152
                 
                 return redirect('userview')
                 
+=======
+
+                return redirect('index')
+
+>>>>>>> .merge_file_a05980
         return render(request, self.template_name, {'form': form})
 
 def logoutView(request):
@@ -111,12 +117,16 @@ def location(request, location_id):
         raise Http404("Location does not exist")
     return render(request, 'location/location.html', {'location': location})
 
+<<<<<<< .merge_file_a01152
 def userview(request):
     current_username = request.user.get_username()
     client = Client.objects.get(username=current_username)
     return render(request, 'userview/userview.html', {'client': client})
 
 #result list --- test!
+=======
+#result list
+>>>>>>> .merge_file_a05980
 def collegeList(request):
     all_locations = Location.objects.all()
     return render(request, 'list/collegeList.html', {'all_locations': all_locations})
@@ -162,7 +172,24 @@ def student(request):
 
 def tourist(request):
     return render(request, 'account/tourist.html', {})
-#admin --- test!
-#def successView(request):
-#    all_locations = Location.objects.all()
-#    return render(request, 'admin/adminPage.html', {'all_locations': all_locations})
+
+#feedback
+class FeedbackFormView(View):
+    template_name = 'feedback/feedback.html'
+    email = None
+    message = None
+
+    def get(self, request):
+        form = FeedbackForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = FeedbackForm(request.POST or None)
+        if form.is_valid():
+            feedback = form.save(commit=False)
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+            form.save()
+            return redirect('index')
+
+        return render(request, self.template_name, {'form': form})
