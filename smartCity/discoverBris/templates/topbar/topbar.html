@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'topbar/topbar.css' %}" type="text/css"/>
+<div id="topbar">
+    <form id="searchbox" class="searchbox" method="POST" action="/search/">
+        {% csrf_token %}
+        <input class="search" id="search" name="search" type="text" placeholder="Search..." onchange="">
+        <input class="submit" id="submit" type="submit" value="Search" onclick="">
+    </form>
+    {% if request.session.session_key == None %}
+    <button onclick="location.href='/registration/'" class="register">Register</button>
+    <button onclick="location.href='/login/'" class="login">Login</button>
+    {% else %}
+    <button onclick="location.href='/logout/'" class="logout">logout</button>
+    {% endif %}
+</div>
