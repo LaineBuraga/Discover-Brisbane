@@ -80,9 +80,9 @@ class ClientLoginView(View):
         if client is not None:
             if client.is_active:
                 login(request, client)
-                
+
                 return redirect('userview')
-                
+
         return render(request, self.template_name, {'form': form})
 
 def logoutView(request):
@@ -181,6 +181,6 @@ class FeedbackFormView(View):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             form.save()
-            return redirect('index')
+            return redirect('userview')
 
         return render(request, self.template_name, {'form': form})
