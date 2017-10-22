@@ -12,8 +12,10 @@
 				<h1>Discover Brisbane</h1>
 			</header><hr>
 			<ul class="breadcrumb">
-				<li><a href="{% url 'index' %}">Home</a></li>
-				<li><a href="">{{ location.category }}</a></li>
+				<li><a href="/homepage/">Home</a></li>
+				{% with '/list/'|add:location.category|lower|add:"List/" as categoryLink %}
+				<li><a href="{{ categoryLink }}">{{ location.category }}</a></li>
+				{% endwith %}
 				<li>{{ location.name }}</li>
 			</ul>
 			{% with 'location/'|add:location.photo_name as image_static %}

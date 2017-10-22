@@ -1,10 +1,10 @@
 
 {% if user.is_authenticated %}
-    {% if client.client_type == 'Business' %}
+    {% if client.client_type|lower == 'business' %}
         {% include 'account/business.html' %}
-    {% elif client.client_type == 'Student' %}
+    {% elif client.client_type|lower == 'student' %}
         {% include 'account/student.html' %}
-    {% elif client.client_type == 'Tourist' %}
+    {% elif client.client_type|lower == 'tourist' %}
         {% include 'account/tourist.html' %}
     {% endif %}
 {% else %}
