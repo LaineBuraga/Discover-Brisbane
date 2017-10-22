@@ -6,16 +6,19 @@
     <link rel="stylesheet" href="{% static 'registration/style.css' %}" type="text/css"/>  
 </head>
     <body>
-        <!-- <div id="bgImage" class="bgImg">
-            background="http://bsnscb.com/data/out/27/39525383-brisbane-wallpapers.jpg" -->
+        {% include 'topbar/topbar.html' %}            
         <div id="account" class="regForm">
-            <form id="form" name="form" method="post" action="registrationform.html">
-                <ul class="History">
-                    <li><a href="///127.0.0.1:8000">Home</a></li>
-                    <li>Registration Form</li>
-                </ul>
+            <form id="form" name="form" method="post" action="registration.html">
+                    <hr><header>
+                            <h1>Discover Brisbane</h1>
+                       </header><hr><br>
+       
+                       <ul class="History">
+                           <li><a href="/homepage/">Home</a></li>
+                           <li>Registration Form</li>
+                       </ul>
+                       <h2>Create an account</h2>  
                     <fieldset>
-                        <h1>Create an account</h1>
                         First Name: <input name="firstName" type="text" required="required" placeholder="Enter your first name" />
                         Last Name: <input name="lastName" type="text" required="required" placeholder="Enter your last name"/><br>
                         Email: <input name="email" type="email" required="required" placeholder="Enter your e-mail" />
@@ -47,7 +50,7 @@
                         <input type="checkbox" name="TandCs" value="TCs"> I have read the terms and conditions.<br><br>
                         <input type="submit" value="Submit">
                         <input type="reset" value="Clear">
-                        <a href="///127.0.0.1:8000"> Cancel </a>
+                        <a href="/homepage/"> Cancel </a>
                     </fieldset>
                 <footer>
                     &copy; Discover Brisbane 2017

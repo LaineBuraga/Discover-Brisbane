@@ -1,16 +1,31 @@
-header {
-    font-size: 150%;
+label {
+font-weight: bold;
+}
+
+form.login-form {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    margin: 0px 150px;
+    box-shadow: 2px 2px 10px #757575;
+    text-align: center;
+    border-style:grove;
+    clear: left;    
+}
+
+h1 {
+    font-size: 50px;
     text-align: center;
     font-variant: small-caps;
     font-weight: bold;
     color: black;
     border-color: lightgrey;
     border-style:grove;
-    padding: 1em;
+    padding: 0.7em;    
     clear: left;
-  }
-  
-  hr {
+    margin: 30px;
+}
+
+hr {
     height: 3px;
     background-color: grey;
   }
@@ -19,21 +34,11 @@ header {
     overflow: auto;
   }
 
-
-h1 {
-    text-align: center;
-    font-size: 50px;
-}
-
 h2 {
+    font-size: 35px;
     text-align: center;
-    color:black;
-    font-size: 30px;
-}
-
-h3 {
-    font-size: 15px;
-    text-align: center;
+    font-variant: small-caps;
+    color: black;
 }
 
 ul.History {
@@ -61,33 +66,14 @@ ul.History li a:hover {
     text-decoration: underline;
 }
 
-body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: small;
-    font-weight: bold;
-    background-color: white;
+footer {
+    text-align: center;
+    font-size: 80%;
+  }
+
+  body {
     padding-top: 60px;
     padding-bottom: 60px;
     padding-left: 250px;
     padding-right: 250px;
 }
-
-fieldset {
-    background-color: white;
-    line-height: 250%;    
-    padding-top: 20px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-fieldset > label {
-    color: gray;
-    font-size: x-small;
-    font-style: italic;
-}
-
-footer {
-    text-align: center;
-    font-size: 50%;
-  }
