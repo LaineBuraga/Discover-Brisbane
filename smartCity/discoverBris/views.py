@@ -1,15 +1,18 @@
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import render
-from .models import Location, Client
+from .models import *
 from django.http import Http404
 
 
 # Create your views here.
 
 def index(request):
-    all_locations = Location.objects.all()
-    context = {'all_locations': all_locations}
+    context = {}
+    context['location'] =  Location.objects.all()
+    context['category'] = Category.objects.all()
+    # context['category'] = Location.objects.raw('SELECT DISTINCT location_id, location.category from location')
+    #context = {'all_locations': all_locations}
     return render(request, 'homepage/homepage.html', context)
 
 def registration(request):

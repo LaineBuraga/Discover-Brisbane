@@ -409,7 +409,7 @@ drop view justmuse;
 drop view justpark;
 drop view justres;
 drop view justzoo;*/
-show tables;
+#show tables;
 /*
 alter table location 
 	add constraint college_id_fk foreign key ( name, address, departments, email, photo_name ) references college ( name, address, departments, email, photo_name ) 

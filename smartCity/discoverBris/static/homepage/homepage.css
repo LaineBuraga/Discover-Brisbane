@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  background-image: url("/static/homepage/brisbane.jpg");
 }
 
 #container {
