@@ -3,6 +3,8 @@ from django import forms
 
 class ClientForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
+    Choices = (('Business', 'Business'),('Student', 'Student'),('Tourist', 'Tourist'),)
+    client_type = forms.ChoiceField(choices=Choices)
 
     class Meta:
         model = Client
