@@ -47,10 +47,8 @@ class MultiEmailField(forms.Field):
         for email in value:
             validate_email(email)
 
-
-
-
 class FeedbackForm(forms.ModelForm):
+    name = forms.CharField(required=True, max_length=45)
     email = forms.EmailField(required=True)
     message = forms.CharField(required=True, max_length=2000,
                                 widget=forms.Textarea(),
@@ -58,15 +56,12 @@ class FeedbackForm(forms.ModelForm):
 
     class Meta:
         model = Feedback
-        fields = ['email', 'message']
-
-           #name = forms.CharField(max_length=30)
+        fields = ['name', 'email', 'message']
 
     def clean(self):
         cleaned_data = super(FeedbackForm, self).clean()
-        #name = cleaned_data.get('name')
+        name = cleaned_data.get('name')
         email = cleaned_data.get('email')
         message = cleaned_data.get('message')
-        #if not name and
-        if not email and not message:
+        if not name and not email and not message:
             raise forms.ValidationError('You have to write something!')

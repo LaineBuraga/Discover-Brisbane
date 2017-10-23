@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Discover Brisbane</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'list/list.css' %}" type="text/css"/>
+    <style>
+      #topbar {
+        margin-right: 0%;
+      }
+
+      button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        padding: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="topbar">
+        <hr><header>
+          <h1>Discover Brisbane</h1>
+        </header><hr>
+        <div class="content"><br>
+          <h2 style="text-align:center; color:darkblue">Thank you for your feedback!</h2>
+          <div style="width: 68%">
+            <button onclick="location.href='{% url 'index' %}'" style="margin:10%">Take me back to homepage</button>
+          </div>
+        </div>
+        <hr><footer style="margin-top: 0%">&copy; Discover Brisbane 2017</footer>
+      </div>
+    </div>
+  </body>
+</html>

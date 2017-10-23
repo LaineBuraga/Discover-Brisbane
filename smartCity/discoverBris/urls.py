@@ -31,4 +31,5 @@ urlpatterns = [
     url(r'^tourist/$', views.tourist, name='tourist'),
     #feedback
     url(r'^feedback/$', views.FeedbackFormView.as_view(), name='feedback'),
+    url(r'^thankyou/$', views.thankyou, name='thankyou'),
 ]

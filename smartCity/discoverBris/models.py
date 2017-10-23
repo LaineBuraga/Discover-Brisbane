@@ -158,12 +158,14 @@ class Client(AbstractUser):
         return self.firstname + " " + self.lastname
 
 class Feedback(models.Model):
-    email = models.CharField(primary_key=True, max_length=255)
+    email = models.CharField(max_length=255)
     message = models.TextField()
+    name = models.CharField(max_length=45)
+    feedback_id = models.AutoField(primary_key=True)
 
     class Meta:
         managed = False
         db_table = 'feedback'
 
     def __str__(self):
-        return self.email
+        return self.name + ' ( ' + self.email + ' )'

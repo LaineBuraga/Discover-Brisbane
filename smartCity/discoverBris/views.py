@@ -60,7 +60,6 @@ class ClientFormView(View):
 
         return render(request, self.template_name, {'form': form})
 
-
 class ClientLoginView(View):
     form_class = ClientLogin
     template_name = 'login/login.html'
@@ -185,6 +184,9 @@ class FeedbackFormView(View):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             form.save()
-            return redirect('index')
+            return redirect('thankyou')
 
         return render(request, self.template_name, {'form': form})
+
+def thankyou(request):
+    return render(request, 'feedback/thankyou.html', {})
