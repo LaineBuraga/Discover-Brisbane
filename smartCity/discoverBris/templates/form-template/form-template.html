@@ -1,7 +1,7 @@
 {% for field in form %}
     <div class="form-group">
-        <label class="field-label">{{ field.label_tag }}</label>
-        <div class="field">{{ field }}</div>
+        <label class="field-label">{{ field.label_tag }}</label> <br>
+        <div class="field">{{ field }}</div> <br>
         <span class="error">{{ field.errors }}</span>
     </div>
 {% endfor %}
