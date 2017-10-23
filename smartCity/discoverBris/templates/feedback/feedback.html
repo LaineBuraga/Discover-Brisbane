@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>Discover Brisbane</title>
-      {% load staticfiles %}
-      <link rel="stylesheet" href="{% static 'homepage/homepage.css' %}" type="text/css"/>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'list/list.css' %}" type="text/css"/>
       <style>
         .feedbackform {
           width: 50%;
@@ -37,9 +37,15 @@
   <body>
     {% include 'topbar/topbar.html' %}
     <div id="container">
-      <hr><header>
-        <h1>Discover Brisbane</h1>
-      </header><hr><br>
+      <div id="topbar">
+  			<hr><header>
+  				<h1>Discover Brisbane</h1>
+  			</header><hr>
+  			<ul class="History">
+  			 <li><a href="{% url 'index' %}">Home</a></li>
+         <li>Feedback form</li>
+  			</ul>
+  		</div><br>
       <h2 style="text-align:center">Tell us what you think!</h2>
       <div class="feedbackform">
         <form class="feedback-form" method="post">
