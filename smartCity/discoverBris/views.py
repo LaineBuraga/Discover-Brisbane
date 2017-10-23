@@ -16,10 +16,13 @@ from .forms import ClientForm, ClientLogin, FeedbackForm
 # Create your views here.
 
 def index(request):
-    all_locations = Location.objects.all()
-    if request.user.is_authenticated():
-        return redirect('userview')
+    all_locations = Location.objects.all
     context = {'all_locations': all_locations}
+    if request.user.is_authenticated():
+        if request.user.is_superuser:
+            return render(request, 'homepage/homepage.html', context)
+    else:
+            return redirect('userview')
     return render(request, 'homepage/homepage.html', context)
 
 def registration(request):
