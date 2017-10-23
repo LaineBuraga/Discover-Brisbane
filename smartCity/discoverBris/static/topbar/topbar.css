@@ -13,7 +13,7 @@
   input.submit {
     display: inline-block;
   }
-  
+
   button.register {
     margin-left: 2%;
     padding: 0.5%;
@@ -23,7 +23,7 @@
     border-style: none;
     display: inline-block;
   }
-  
+
   button.login {
     margin-left: 1%;
     padding: 0.5%;
@@ -33,7 +33,7 @@
     border-style: none;
     display: inline-block;
   }
-  
+
   button.logout {
     margin-left: 1%;
     padding: 0.5%;

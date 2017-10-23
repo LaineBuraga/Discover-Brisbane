@@ -4,14 +4,20 @@
 		<title>Discover Brisbane - QUT</title>
 		{% load staticfiles %}
 		<link rel="stylesheet" href="{% static 'location/location2.css' %}" type="text/css"/>
+		<style>
+			hr {
+				height: 3px;
+				background-color: grey;
+			}
+		</style>
 	</head>
 	<body>
-			{% include 'topbar/topbar.html' %}
 		<div class="container">
+			{% include 'topbar/topbar.html' %}
 			<hr><header>
 				<h1>Discover Brisbane</h1>
 			</header><hr>
-			<ul class="breadcrumb">
+			<ul class="breadcrumb" style="width:99%; padding: 10px 5px;">
 				<li><a href="{% url 'index' %}">Home</a></li>
 				{% with '/list/'|add:location.category|lower|add:"List/" as categoryLink %}
 				<li><a href="{{ categoryLink }}">{{ location.category }}</a></li>

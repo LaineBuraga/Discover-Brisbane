@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <link rel="stylesheet" href="{% static 'topbar/topbar.css' %}" type="text/css"/>
-<div id="topbar">
+<div id="topbar" style="width:100%">
     <form id="searchbox" class="searchbox" method="POST" action="/search/">
         {% csrf_token %}
         <input class="search" id="search" name="search" type="text" placeholder="Search..." onchange="">
