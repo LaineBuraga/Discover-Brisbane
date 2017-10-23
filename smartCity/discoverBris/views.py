@@ -39,19 +39,18 @@ class ClientFormView(View):
     # process form data
     def post(self, request):
         form = self.form_class(request.POST)
-
         if form.is_valid():
             client = form.save(commit=False)
 
             # cleaned (normalised) data
             email = form.cleaned_data['email']
+            username = form.cleaned_data['username']
             password = form.cleaned_data['password']
             client.set_password(password)
             client.save()
 
             # returns Client objects if credentials are correct
-            client = authenticate(email=email, password=password)
-
+            client = authenticate(username=username, password=password)
             # log client in if successful authentication
             if client is not None:
                 if client.is_active:
