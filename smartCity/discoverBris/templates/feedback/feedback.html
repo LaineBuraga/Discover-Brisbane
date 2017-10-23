@@ -10,7 +10,7 @@
           margin-left: auto;
           margin-right: auto;
         }
-        .feedback-form {
+        .form-group {
           margin-left: auto;
           margin-right: auto;
         }
@@ -48,7 +48,7 @@
   		</div><br>
       <h2 style="text-align:center">Tell us what you think!</h2>
       <div class="feedbackform">
-        <form class="feedback-form" method="post">
+        <form class="form-group"  action="" method="post">
           {% csrf_token %}
           {% include 'form-template/form-template.html' %}
           <div class="form-group">

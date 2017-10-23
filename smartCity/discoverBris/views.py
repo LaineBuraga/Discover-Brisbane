@@ -21,7 +21,7 @@ def index(request):
     if request.user.is_authenticated():
         if request.user.is_superuser:
             return render(request, 'homepage/homepage.html', context)
-    else:
+        else:
             return redirect('userview')
     return render(request, 'homepage/homepage.html', context)
 
@@ -169,21 +169,22 @@ def tourist(request):
 
 #feedback
 class FeedbackFormView(View):
+    form_class = FeedbackForm
     template_name = 'feedback/feedback.html'
     email = None
     message = None
 
     def get(self, request):
-        form = FeedbackForm()
+        form = self.form_class(None)
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
-        form = FeedbackForm(request.POST or None)
+        form = self.form_class(request.POST)
         if form.is_valid():
             feedback = form.save(commit=False)
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             form.save()
-            return redirect('userview')
+            return redirect('index')
 
         return render(request, self.template_name, {'form': form})
