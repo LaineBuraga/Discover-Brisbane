@@ -12,7 +12,7 @@
 				<h1>Discover Brisbane</h1>
 			</header><hr>
 			<ul class="breadcrumb">
-				<li><a href="/homepage/">Home</a></li>
+				<li><a href="{% url 'index' %}">Home</a></li>
 				{% with '/list/'|add:location.category|lower|add:"List/" as categoryLink %}
 				<li><a href="{{ categoryLink }}">{{ location.category }}</a></li>
 				{% endwith %}
