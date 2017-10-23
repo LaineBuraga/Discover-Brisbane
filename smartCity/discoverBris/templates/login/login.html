@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <title>Log in</title>
-        
+
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'login/login.css' %}" type="text/css"/>
     <body>
-    {% include 'topbar/topbar.html' %}        
+    {% include 'topbar/topbar.html' %}
 <div class="container">
     <hr><header>
         <h1>Discover Brisbane</h1>
@@ -13,19 +13,19 @@
 
     <!-- Breadcrumbs -->
     <ul class="History">
-        <li><a href="/homepage/">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li>Log in</li>
     </ul>
 
     <form class="login-form" action="" method="post">
      <h2> Log in</h2>
-    
+
     {% csrf_token %}
     {% include 'form-template/form-template.html' %}
     <div class="form-group">
         <div>
             <button type="submit">Submit</button>
-        </div> 
+        </div>
     </div>
 </form>
 </div>
