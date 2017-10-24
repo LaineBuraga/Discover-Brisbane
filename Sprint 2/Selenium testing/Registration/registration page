@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://127.0.0.1:8000/" />
+<title>registration page</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">registration page</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://127.0.0.1:8000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Discover Brisbane</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Discover Brisbane</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2</td>
+	<td>Registration</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=label.field-label &gt; label</td>
+	<td>exact:Username:</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=label.field-label &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=id_username</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=id_username</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=id_username</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/label/label</td>
+	<td>Email address:</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[2]/label/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=id_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=id_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=id_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_first_name</td>
+	<td>jane</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/label/label</td>
+	<td>First name:</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/label/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=id_first_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_username</td>
+	<td>jane</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_email</td>
+	<td>janesmith@gmail.com</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[4]/label/label</td>
+	<td>Last name:</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[4]/label/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=id_last_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=id_last_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=id_last_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_last_name</td>
+	<td>smith</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[5]/label/label</td>
+	<td>Phone number:</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[5]/label/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=id_phone_number</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=id_phone_number</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=id_phone_number</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_phone_number</td>
+	<td>0123456789</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[6]/label/label</td>
+	<td>Client type:</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[6]/label/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=id_client_type</td>
+	<td>Business Student Tourist</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=id_client_type</td>
+	<td>label=Student</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[7]/label/label</td>
+	<td>exact:Password:</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[7]/label/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=id_password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=id_password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=id_password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_password</td>
+	<td>brisbane</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[8]/label/label</td>
+	<td>Confirm password:</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[8]/label/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_confirm_password</td>
+	<td>brisbane</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Discover Brisbane - Student View</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.title</td>
+	<td>Welcome To Your Student View!</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h2.title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Colleges</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Queensland University of Technology</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Libraries</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Brisbane Square Library</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Discover Brisbane</td>
+	<td>Home page</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_username</td>
+	<td>businessman</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_email</td>
+	<td>business@man.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_first_name</td>
+	<td>bob</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_last_name</td>
+	<td>smith</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_phone_number</td>
+	<td>0123456789</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=id_client_type</td>
+	<td>label=Business</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_confirm_password</td>
+	<td>business1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_password</td>
+	<td>business1</td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Discover Brisbane - Business View</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.title</td>
+	<td>Welcome To Your Business View!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Hotels</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Treasury Hotel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Hotel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Industries</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Brisbane City Council</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=img.place</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=article &gt; h1</td>
+	<td>Brisbane City Council</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p</td>
+	<td>exact:Address: 13 Waldheim St, Annerley QLD 4103</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[2]</td>
+	<td>Phone No: 07 3403 8888</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[3]</td>
+	<td>exact:Email: None</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[4]</td>
+	<td>Industry Type: Council</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=footer</td>
+	<td>© Discover Brisbane 2017</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Parks</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Zoos</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Museums</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Restaurants</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Riverbar &amp; Kitchen</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Malls</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Myer Centre, Brisbane</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Colleges in Brisbane</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Libraries in Brisbane</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Tell us what you think!</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html</td>
+	<td>Logout successful<br /> Redirecting to Homepage...</td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>Discover Brisbane</td>
+	<td>Homepage</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_email</td>
+	<td>newtourist@mail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_username</td>
+	<td>newtourist</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_last_name</td>
+	<td>tourist</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_first_name</td>
+	<td>tina</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_phone_number</td>
+	<td>0987654321</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=id_client_type</td>
+	<td>label=Tourist</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_password</td>
+	<td>tourist1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_confirm_password</td>
+	<td>tourist1</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2</td>
+	<td>Registration</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Discover Brisbane - Business View</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.title</td>
+	<td>Welcome To Your Tourist View!</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Discover Brisbane</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Hotels</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Parks</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Zoos</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Museums</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='container']/div[3]/div[2]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='container']/div[3]/div[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Hotels</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Treasury Hotel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Parks</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=City Botanic Gardens</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img.place</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=article &gt; h1</td>
+	<td>City Botanic Gardens</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=p</td>
+	<td>exact:Address: Alice St, Brisbane City QLD 4000</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[2]</td>
+	<td>Phone No: 07 3403 8888</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//p[3]</td>
+	<td>exact:Email: None</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=footer</td>
+	<td>© Discover Brisbane 2017</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Discover Brisbane</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html</td>
+	<td>Logout successful<br /> Redirecting to Homepage...</td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>Discover Brisbane</td>
+	<td>Home page</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

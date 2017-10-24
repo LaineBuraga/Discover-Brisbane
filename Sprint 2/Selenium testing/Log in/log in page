@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://127.0.0.1:8000/" />
+<title>log in page</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">log in page</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://127.0.0.1:8000/</td>
+	<td>Discover Brisbane Website</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Discover Brisbane</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=ul.History</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2</td>
+	<td>Log in</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=label.field-label &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=label.field-label &gt; label</td>
+	<td>exact:Username:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/label/label</td>
+	<td>exact:Password:</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[2]/label/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=id_username</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=id_password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=footer</td>
+	<td>© Discover Brisbane 2017</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_username</td>
+	<td>jane</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_password</td>
+	<td>brisbane</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Discover Brisbane - Student View</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Discover Brisbane</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Colleges</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Queensland University of Technology</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Libraries</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Brisbane Square Library</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html</td>
+	<td>Logout successful<br /> Redirecting to Homepage...</td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>Discover Brisbane</td>
+	<td>Home page</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_username</td>
+	<td>businessman</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_password</td>
+	<td>business1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Discover Brisbane - Business View</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.title</td>
+	<td>Welcome To Your Business View!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Hotels</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Treasury Hotel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Industries</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Brisbane City Council</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Restaurants</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html</td>
+	<td>Logout successful<br /> Redirecting to Homepage...</td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>Discover Brisbane</td>
+	<td>Home page</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_username</td>
+	<td>newtourist</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_password</td>
+	<td>tourist1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2.title</td>
+	<td>Welcome To Your Tourist View!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Hotels</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Parks</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Brisbane Botanic Gardens Mt Coot-tha</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Park</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html</td>
+	<td>Logout successful<br /> Redirecting to Homepage...</td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>Discover Brisbane</td>
+	<td>Home page</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
