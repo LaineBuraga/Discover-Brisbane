@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://127.0.0.1:8000/" />
+<title>7. Admin page - Testing commands in HTML</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">7. Admin page - Testing commands in HTML</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://127.0.0.1:8000/admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_username</td>
+	<td>Susan</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_password</td>
+	<td>susanpassword</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Site administration | Django site admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=strong</td>
+	<td>Susan</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Discoverbris</td>
+	<td>Discoverbris</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Auth users</td>
+	<td>Auth users</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Clients</td>
+	<td>Clients</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Feedbacks</td>
+	<td>Feedbacks</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Locations</td>
+	<td>Locations</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=tr.model-authuser &gt; td &gt; a.addlink</td>
+	<td>Add</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//a[contains(text(),'Change')])[3]</td>
+	<td>Change</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=View site</td>
+	<td>View site</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Change password</td>
+	<td>Change password</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Log out</td>
+	<td>Log out</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View site</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Discover Brisbane</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=button.logout</td>
+	<td>logout</td>
+</tr>
+<tr>
+	<td>goBack</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Auth users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Susan Susan</td>
+	<td>Susan Susan</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=th.column-__str__ &gt; div.text &gt; span</td>
+	<td>Auth user</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Susan Susan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>name=_save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Auth users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Discoverbris</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Change</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Susan Susan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=_save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Discoverbris</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_password</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Today</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Now</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_is_superuser</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_username</td>
+	<td>Mark</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_first_name</td>
+	<td>Mark</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_last_name</td>
+	<td>Weins</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_email</td>
+	<td>markw@gmail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_is_staff</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_is_active</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.form-row.field-date_joined &gt; div &gt; p.datetime &gt; span.datetimeshortcuts &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Now')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=_save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.success</td>
+	<td>The auth user &quot;Mark Weins&quot; was added successfully.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Discoverbris</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Change</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Mark Weins</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=No, take me back</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_is_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.success</td>
+	<td>The auth user &quot;Mark Weins&quot; was deleted successfully.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Discoverbris</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Clients</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=th.column-__str__ &gt; div.text &gt; span</td>
+	<td>Client</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add client</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_password</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_username</td>
+	<td>Jessica</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_first_name</td>
+	<td>Jessica</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_last_name</td>
+	<td>Loveheart</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_email</td>
+	<td>jesslove@gmail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_phone_number</td>
+	<td>0123456789</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_client_type</td>
+	<td>Business</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=_save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.success</td>
+	<td>The client &quot;Jessica Loveheart&quot; was added successfully.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Jessica Loveheart</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_phone_number</td>
+	<td>0123456800</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=_save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.success</td>
+	<td>The client &quot;Jessica Loveheart&quot; was changed successfully.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=th.field-__str__ &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_client_type</td>
+	<td>Student</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=_save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.success</td>
+	<td>The client &quot;Jessica Loveheart&quot; was changed successfully.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=th.field-__str__ &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.success</td>
+	<td>The client &quot;Jessica Loveheart&quot; was deleted successfully.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Discoverbris</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Feedbacks</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sam ( asd@gmail.com )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=label.required</td>
+	<td>exact:Email:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.form-row.field-message &gt; div &gt; label.required</td>
+	<td>exact:Message:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.form-row.field-name &gt; div &gt; label.required</td>
+	<td>exact:Name:</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#content &gt; h1</td>
+	<td>exact:Are you sure?</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.success</td>
+	<td>The feedback &quot;Sam ( asd@gmail.com )&quot; was deleted successfully.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Discoverbris</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Locations</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Queen Street Mall</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Locations</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Select location to change | Django site admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add location</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_name</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_address</td>
+	<td>123 test road, test town</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_phone_number</td>
+	<td>0123456789</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_email</td>
+	<td>test@aol.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_category</td>
+	<td>Industry</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_photo_name</td>
+	<td>industry.jpg</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=_save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.success</td>
+	<td>The location &quot;Test&quot; was added successfully.</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=th.field-__str__ &gt; a</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=th.field-__str__ &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#content &gt; h1</td>
+	<td>exact:Are you sure?</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/ul[2]/li</td>
+	<td>exact:Location: Test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.success</td>
+	<td>The location &quot;Test&quot; was deleted successfully.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Queen Street Mall</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_category</td>
+	<td>Park</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=_save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.success</td>
+	<td>The location &quot;Queen Street Mall&quot; was changed successfully.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=th.field-__str__ &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_category</td>
+	<td>Mall</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=_save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Discoverbris</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Log out</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Logged out | Django site admin</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

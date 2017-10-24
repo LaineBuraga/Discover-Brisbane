@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://127.0.0.1:8000/" />
+<title>3. Selenium Testing - Feedback</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">3. Selenium Testing - Feedback</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://127.0.0.1:8000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Discover Brisbane</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='container']/div[4]/div/div</td>
+	<td>Tell us what you think!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@alt='Feedback']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='topbar']/ul/li[2]</td>
+	<td>Feedback form</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=label.field-label &gt; label</td>
+	<td>exact:Name:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=id_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='container']/div[3]/form/div[2]/label/label</td>
+	<td>exact:Email:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=id_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='container']/div[3]/form/div[3]/label/label</td>
+	<td>exact:Message:</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=id_message</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=button[type=&quot;submit&quot;]</td>
+	<td>Submit</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_name</td>
+	<td>Sally</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_email</td>
+	<td>sally@gmail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id_message</td>
+	<td>Thank you! I love it!</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td>i</td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Discover Brisbane - Thank you</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td>i</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>i</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=h1</td>
+	<td>Discover Brisbane</td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Discover Brisbane</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

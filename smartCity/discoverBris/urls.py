@@ -7,14 +7,14 @@ urlpatterns = [
     url(r'^locations/$', views.locations, name='locations'),
     url(r'^locations/(?P<location_id>[0-9]+)/$', views.location, name='location'),
     url(r'^userview/$',views.userview, name='userview'),
-
+    #register, login, logout
     url(r'^registration/$',views.registration, name='registration'),
     url(r'^login/$',views.ClientLoginView.as_view(), name='login'),
     url(r'^logout/$',views.logoutView, name='logout'),
+    #search list
     url(r'^search/$',views.searchLocations, name='searchLocations'),
     #temp
     url(r'^registrationtemp/$',views.ClientFormView.as_view(), name='registrationtemp'),
-
     #result list
     url(r'^list/collegeList/$', views.collegeList, name='college'),
     url(r'^list/hotelList/$', views.hotelList, name='hotel'),
